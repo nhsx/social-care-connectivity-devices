@@ -1,0 +1,5 @@
+# gitignore alteryx data
+# documentation: http://docs.splunk.com/Documentation/Splunk/6.2.3/admin/Defaultmetaconf
+
+# alteryx data folder
+Data
