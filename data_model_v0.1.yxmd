@@ -1,0 +1,441 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CQC_carehomes.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="location_type" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_street_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_address_line_2" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_city" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_county" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_postal_code" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_web_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_phone" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="registered_manager" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_region" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_local_authority" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="care_homes_beds" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_hsca_start_date" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_inspection_directorate" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_primary_inspection_category" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_latest_overall_rating" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_type_or_sector" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="location_uprn" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="provider_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="provider_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="provider_type_or_sector" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="provider_inspection_directorate" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="provider_ownership_type" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="provider_phone_formatted" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="provider_web_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="current_service" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="best_available_service" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="resident_internet_flag" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="match_similarity" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="carehomes_co_uk_record" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="Field_33" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="Field_34" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+            <Field name="Field_35" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field_33" selected="False" />
+            <SelectField field="Field_34" selected="False" />
+            <SelectField field="Field_35" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CQC_providers.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="brand_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="brand_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="companies_house_number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="charity_number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="provider_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="location_hsca_start_date" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="type_or_sector" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="inspection_directorate" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="primary_inspection_category" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="ownership_type" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="telephone_number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="web_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="street_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="address_line_2" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="city" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="county" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="postal_code" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="paf_uprn_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="local_authority" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="region" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="latitude" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="longitude" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="parliamentary_constituency" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="nominated_individual_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="main_partner_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="count_of_locations" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="count_of_carehomes" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="count_of_domiciliary" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="count_of_beds" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="average_beds" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="regions_covered" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="ranking" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="provider_tshirt_size" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="Field_35" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+            <Field name="Field_36" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field_35" selected="False" />
+            <SelectField field="Field_36" selected="False" />
+            <SelectField field="Field_33" selected="False" />
+            <SelectField field="Field_34" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>connectivity_upgrade.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="location_type" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_street_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_address_line_2" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_city" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_county" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_postal_code" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_web_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_phone" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="registered_manager" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_region" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="local_authority" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="care_homes_beds" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_uprn" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="provider_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="provider_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="public_sector_flag" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="resident_internet_flag" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="location_tshirt_size" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="provider_tshirt_size" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="current_service" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="service_rating" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="best_available_service" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="available_service_rating" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="upgrade_path" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="outdoor_4g_coverage" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="indoor_4g_coverage" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="rgc_eligibility" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="rgc_ineligibility_reason" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="Field_31" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+            <Field name="Field_32" size="254" source="File: D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field_31" selected="False" />
+            <SelectField field="Field_32" selected="False" />
+            <SelectField field="Field_33" selected="False" />
+            <SelectField field="Field_34" selected="False" />
+            <SelectField field="Field_35" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="402" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">D:\Users\Craig.Shenton\Database\Data Model Inputs\CQC Raw Data\CQC_master..yxdb</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CQC_master..yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="282" y="162" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Join Connectivity Data to CQC list</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="294" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="location_id" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="location_id" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_location_type" selected="False" rename="Right_location_type" input="Right_" />
+                <SelectField field="Right_location_name" selected="False" rename="Right_location_name" input="Right_" />
+                <SelectField field="Right_location_street_address" selected="False" rename="Right_location_street_address" input="Right_" />
+                <SelectField field="Right_location_address_line_2" selected="False" rename="Right_location_address_line_2" input="Right_" />
+                <SelectField field="Right_location_city" selected="False" rename="Right_location_city" input="Right_" />
+                <SelectField field="Right_location_county" selected="False" rename="Right_location_county" input="Right_" />
+                <SelectField field="Right_location_postal_code" selected="False" rename="Right_location_postal_code" input="Right_" />
+                <SelectField field="Right_location_web_address" selected="False" rename="Right_location_web_address" input="Right_" />
+                <SelectField field="Right_location_phone" selected="False" rename="Right_location_phone" input="Right_" />
+                <SelectField field="Right_registered_manager" selected="False" rename="Right_registered_manager" input="Right_" />
+                <SelectField field="Right_location_id" selected="False" rename="Right_location_id" input="Right_" />
+                <SelectField field="Right_location_region" selected="False" rename="Right_location_region" input="Right_" />
+                <SelectField field="Right_care_homes_beds" selected="False" rename="Right_care_homes_beds" input="Right_" />
+                <SelectField field="Right_location_uprn" selected="False" rename="Right_location_uprn" input="Right_" />
+                <SelectField field="Right_provider_id" selected="False" rename="Right_provider_id" input="Right_" />
+                <SelectField field="Right_provider_name" selected="False" rename="Right_provider_name" input="Right_" />
+                <SelectField field="Right_resident_internet_flag" selected="False" rename="Right_resident_internet_flag" input="Right_" />
+                <SelectField field="Right_current_service" selected="False" rename="Right_current_service" input="Right_" />
+                <SelectField field="Right_best_available_service" selected="False" rename="Right_best_available_service" input="Right_" />
+                <SelectField field="Right_location_hsca_start_date" selected="True" rename="Right_location_hsca_start_date" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="7" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Join" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>data_model_v0.1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
