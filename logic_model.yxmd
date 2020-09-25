@@ -1,0 +1,2488 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.4">
+  <Nodes>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="2238" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2478" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">Data\Data Model Outputs\decision_results.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>UTF16</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>decision_results.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2360" y="518" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Decision" action="GroupBy" rename="Decision" />
+            <SummarizeField field="Decision" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="80">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="631" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="care_homes_beds" action="GroupBy" rename="care_homes_beds" />
+            <SummarizeField field="care_homes_beds" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="619" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">Data\Data Model Inputs\count_of_beds_cqc.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28593</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>count_of_beds_cqc.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2454" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="location_id" selected="True" />
+            <SelectField field="Q1.1. CQC number" selected="True" />
+            <SelectField field="care_homes_beds" selected="True" />
+            <SelectField field="Q4.1. Select a number:" selected="True" rename="Number of Tablets" />
+            <SelectField field="Tablet / Beds" selected="True" />
+            <SelectField field="Priority" selected="True" />
+            <SelectField field="Decision" selected="True" />
+            <SelectField field="Q2. Does the care home you work for have wifi for staff?" selected="True" />
+            <SelectField field="Q1.2. Re-enter CQC number" selected="False" />
+            <SelectField field="Comments:" selected="False" />
+            <SelectField field="Q3.1. Cost" selected="False" />
+            <SelectField field="Q3.2. Do not know which provider to use" selected="False" />
+            <SelectField field="Q3.3. Problems with the building/getting a signal" selected="False" />
+            <SelectField field="Q3.4. It's not a priority" selected="False" />
+            <SelectField field="Q3.5. Other (please specify):" selected="False" />
+            <SelectField field="Q4.2. Laptops" selected="False" />
+            <SelectField field="Q4.3. Personal smart phones" selected="False" />
+            <SelectField field="Q4.4. Work smart phones" selected="False" />
+            <SelectField field="Q5. Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?" selected="False" />
+            <SelectField field="Q6.1. Personal smart phone" selected="False" />
+            <SelectField field="Q6.2. Work smart phone" selected="False" />
+            <SelectField field="Q6.3. Laptop" selected="False" />
+            <SelectField field="Q6.4. None, we don't use any other devices for remote consultations" selected="False" />
+            <SelectField field="Q6.5. Other (please specify):" selected="False" />
+            <SelectField field="Q7.1. Not enough tablet devices for staff to use for this purpose" selected="True" />
+            <SelectField field="Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)" selected="True" />
+            <SelectField field="Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations" selected="True" />
+            <SelectField field="Q7.4. No or poor wifi connection" selected="False" />
+            <SelectField field="Q7.5. Not enough staff have the time or skills" selected="False" />
+            <SelectField field="Q7.6. Our local GP does not offer video consultations" selected="False" />
+            <SelectField field="Q7.7. Our local GP uses software that does not work with our iPads and other devices" selected="False" />
+            <SelectField field="Q7.8. There are no issues that make it difficult to facilitate calls" selected="False" />
+            <SelectField field="Q7.9. Other (please specify):" selected="False" />
+            <SelectField field="Q7.10. Please add any further details:" selected="False" />
+            <SelectField field="Q8.1. Digital care planning software" selected="False" />
+            <SelectField field="Q8.2. Digital medication management system" selected="False" />
+            <SelectField field="Q8.3. Remote monitoring tools (to monitor residents' health and vital signs)" selected="False" />
+            <SelectField field="Q8.4. Tools/devices to help residents make video calls to their family" selected="False" />
+            <SelectField field="Q8.5. Prescription ordering system" selected="False" />
+            <SelectField field="Q8.6. Other (please specify):" selected="False" />
+            <SelectField field="Q9.1. Digital care planning software" selected="False" />
+            <SelectField field="Q9.2. Digital medical management system" selected="False" />
+            <SelectField field="Q9.3. Remote monitoring tools (to monitor residents' health and vital signs)" selected="False" />
+            <SelectField field="Q9.4. Tools/devices to help residents make video calls to their family" selected="False" />
+            <SelectField field="Q9.5. Prescription ordering system" selected="False" />
+            <SelectField field="Q9.6. Other (please specify):" selected="False" />
+            <SelectField field="Q10. How confident are staff when using devices such as laptops, tablets and iPads?" selected="False" />
+            <SelectField field="Q11.1. We don't have any IT (e.g. laptops, desktop computers)" selected="False" />
+            <SelectField field="Q11.2. We have devices but we don't use them" selected="False" />
+            <SelectField field="Q11.3. By calling our IT helpdesk" selected="False" />
+            <SelectField field="Q11.4. By a company technical contact onsite or at another location" selected="False" />
+            <SelectField field="Q11.5. By an external organisation" selected="False" />
+            <SelectField field="Q11.6. By working it out ourselves" selected="False" />
+            <SelectField field="Q11.7. By running our own formal IT training" selected="False" />
+            <SelectField field="Q11.8. Informally with colleagues showing each other" selected="False" />
+            <SelectField field="Q11.9. Other (please specify):" selected="False" />
+            <SelectField field="Q12. How many residents does your care home have capacity for?" selected="False" />
+            <SelectField field="Q16.1. I agree to the terms of use." selected="False" />
+            <SelectField field="Q17. Permission to share details with supplier" selected="False" />
+            <SelectField field="If you have answered 'No' please explain why:" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="454" width="541" height="403" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Survey Database</Caption>
+          <Style TextColor="#000000" FillColor="#d9f2ff" BorderColor="#004080" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79.00006" y="510" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>survey_extract.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="UserID" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="UserNo" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Email" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="IP Address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Unique ID" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Started date" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Started time" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Ended date" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Ended time" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Status" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Tracking Link" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q1.1. CQC number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q1.2. Re-enter CQC number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q2. Does the care home you work for have wifi for staff?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Comments:" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q3.1. Cost" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q3.2. Do not know which provider to use" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q3.3. Problems with the building/getting a signal" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q3.4. It's not a priority" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q3.5. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q4.1. Select a number:" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q4.2. Laptops" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q4.3. Personal smart phones" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q4.4. Work smart phones" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q5. Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q6.1. Personal smart phone" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q6.2. Work smart phone" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q6.3. Laptop" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q6.4. None, we don't use any other devices for remote consultations" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q6.5. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.1. Not enough tablet devices for staff to use for this purpose" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.4. No or poor wifi connection" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.5. Not enough staff have the time or skills" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.6. Our local GP does not offer video consultations" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.7. Our local GP uses software that does not work with our iPads and other devices" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.8. There are no issues that make it difficult to facilitate calls" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.9. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q7.10. Please add any further details:" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q8.1. Digital care planning software" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q8.2. Digital medication management system" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q8.3. Remote monitoring tools (to monitor residents' health and vital signs)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q8.4. Tools/devices to help residents make video calls to their family" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q8.5. Prescription ordering system" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q8.6. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q9.1. Digital care planning software" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q9.2. Digital medical management system" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q9.3. Remote monitoring tools (to monitor residents' health and vital signs)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q9.4. Tools/devices to help residents make video calls to their family" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q9.5. Prescription ordering system" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q9.6. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q10. How confident are staff when using devices such as laptops, tablets and iPads?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q11.1. We don't have any IT (e.g. laptops, desktop computers)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q11.2. We have devices but we don't use them" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q11.3. By calling our IT helpdesk" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q11.4. By a company technical contact onsite or at another location" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q11.5. By an external organisation" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q11.6. By working it out ourselves" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q11.7. By running our own formal IT training" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q11.8. Informally with colleagues showing each other" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q11.9. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q12. How many residents does your care home have capacity for?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q13.1. Recipient name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q13.2. Care home name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q13.3. First line of address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q13.4. Second line of address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q13.5. City/town" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q13.6. County" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q13.7. Post code" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q13.8. Contact telephone number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q13.9. Contact email address (NHS Mail or other)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q14. Is the contact email address you have given the same one that you would like to be set up on the iPad (if you were to be selected to receive one)?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q15. Is there a digital champion (someone who can help  others to use the iPad) in your care home?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q16.1. I agree to the terms of use." size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="Q17. To continue with your application, you must now give us permission to share your details with our supplier (Apple) so that we can arrange to deliver a working iPad to you, if your application is successful. Your details will be held securely and will" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+                <Field name="If you have answered 'No' please explain why:" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\test_v1.1\survey_extract.csv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings>
+            <Position x="211" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="List Box (11)">""</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">True</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">True</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="392.0001" y="506" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">Data\Data Model Outputs\survey_database_master.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>survey_database_master.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="200.0001" y="560.0001" width="100" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Clean CQC codes</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="296.0001" y="584.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Q4.1. Select a number:" selected="True" type="FixedDecimal" size="254.0" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="66">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="199" y="726" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>Text</FieldType>
+              <Fields orderChanged="False">
+                <Field name="Q4.1. Select a number:" />
+                <Field name="UserID" selected="False" />
+                <Field name="UserNo" selected="False" />
+                <Field name="Name" selected="False" />
+                <Field name="Email" selected="False" />
+                <Field name="IP Address" selected="False" />
+                <Field name="Unique ID" selected="False" />
+                <Field name="Started date" selected="False" />
+                <Field name="Started time" selected="False" />
+                <Field name="Ended date" selected="False" />
+                <Field name="Ended time" selected="False" />
+                <Field name="Status" selected="False" />
+                <Field name="Tracking Link" selected="False" />
+                <Field name="Q1.1. CQC number" selected="False" />
+                <Field name="Q1.2. Re-enter CQC number" selected="False" />
+                <Field name="Q2. Does the care home you work for have wifi for staff?" selected="False" />
+                <Field name="Comments:" selected="False" />
+                <Field name="Q3.1. Cost" selected="False" />
+                <Field name="Q3.2. Do not know which provider to use" selected="False" />
+                <Field name="Q3.3. Problems with the building/getting a signal" selected="False" />
+                <Field name="Q3.4. It's not a priority" selected="False" />
+                <Field name="Q3.5. Other (please specify):" selected="False" />
+                <Field name="Q4.2. Laptops" selected="False" />
+                <Field name="Q4.3. Personal smart phones" selected="False" />
+                <Field name="Q4.4. Work smart phones" selected="False" />
+                <Field name="Q5. Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?" selected="False" />
+                <Field name="Q6.1. Personal smart phone" selected="False" />
+                <Field name="Q6.2. Work smart phone" selected="False" />
+                <Field name="Q6.3. Laptop" selected="False" />
+                <Field name="Q6.4. None, we don't use any other devices for remote consultations" selected="False" />
+                <Field name="Q6.5. Other (please specify):" selected="False" />
+                <Field name="Q7.1. Not enough tablet devices for staff to use for this purpose" selected="False" />
+                <Field name="Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)" selected="False" />
+                <Field name="Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations" selected="False" />
+                <Field name="Q7.4. No or poor wifi connection" selected="False" />
+                <Field name="Q7.5. Not enough staff have the time or skills" selected="False" />
+                <Field name="Q7.6. Our local GP does not offer video consultations" selected="False" />
+                <Field name="Q7.7. Our local GP uses software that does not work with our iPads and other devices" selected="False" />
+                <Field name="Q7.8. There are no issues that make it difficult to facilitate calls" selected="False" />
+                <Field name="Q7.9. Other (please specify):" selected="False" />
+                <Field name="Q7.10. Please add any further details:" selected="False" />
+                <Field name="Q8.1. Digital care planning software" selected="False" />
+                <Field name="Q8.2. Digital medication management system" selected="False" />
+                <Field name="Q8.3. Remote monitoring tools (to monitor residents' health and vital signs)" selected="False" />
+                <Field name="Q8.4. Tools/devices to help residents make video calls to their family" selected="False" />
+                <Field name="Q8.5. Prescription ordering system" selected="False" />
+                <Field name="Q8.6. Other (please specify):" selected="False" />
+                <Field name="Q9.1. Digital care planning software" selected="False" />
+                <Field name="Q9.2. Digital medical management system" selected="False" />
+                <Field name="Q9.3. Remote monitoring tools (to monitor residents' health and vital signs)" selected="False" />
+                <Field name="Q9.4. Tools/devices to help residents make video calls to their family" selected="False" />
+                <Field name="Q9.5. Prescription ordering system" selected="False" />
+                <Field name="Q9.6. Other (please specify):" selected="False" />
+                <Field name="Q10. How confident are staff when using devices such as laptops, tablets and iPads?" selected="False" />
+                <Field name="Q11.1. We don't have any IT (e.g. laptops, desktop computers)" selected="False" />
+                <Field name="Q11.2. We have devices but we don't use them" selected="False" />
+                <Field name="Q11.3. By calling our IT helpdesk" selected="False" />
+                <Field name="Q11.4. By a company technical contact onsite or at another location" selected="False" />
+                <Field name="Q11.5. By an external organisation" selected="False" />
+                <Field name="Q11.6. By working it out ourselves" selected="False" />
+                <Field name="Q11.7. By running our own formal IT training" selected="False" />
+                <Field name="Q11.8. Informally with colleagues showing each other" selected="False" />
+                <Field name="Q11.9. Other (please specify):" selected="False" />
+                <Field name="Q12. How many residents does your care home have capacity for?" selected="False" />
+                <Field name="Q13.1. Recipient name" selected="False" />
+                <Field name="Q13.2. Care home name" selected="False" />
+                <Field name="Q13.3. First line of address" selected="False" />
+                <Field name="Q13.4. Second line of address" selected="False" />
+                <Field name="Q13.5. City/town" selected="False" />
+                <Field name="Q13.6. County" selected="False" />
+                <Field name="Q13.7. Post code" selected="False" />
+                <Field name="Q13.8. Contact telephone number" selected="False" />
+                <Field name="Q13.9. Contact email address (NHS Mail or other)" selected="False" />
+                <Field name="Q14. Is the contact email address you have given the same one that you would like to be set up on the iPad (if you were to be selected to receive one)?" selected="False" />
+                <Field name="Q15. Is there a digital champion (someone who can help  others to use the iPad) in your care home?" selected="False" />
+                <Field name="Q16.1. I agree to the terms of use." selected="False" />
+                <Field name="Q17. To continue with your application, you must now give us permission to share your details with our supplier (Apple) so that we can arrange to deliver a working iPad to you, if your application is successful. Your details will be held securely and will" selected="False" />
+                <Field name="If you have answered 'No' please explain why:" selected="False" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>Replace([_CurrentField_], 'None', '0')</Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Replace([_CurrentField_], 'None', '0')</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="68">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="80.00001" y="710" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>survey_extract_synthetic.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="UserID" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="UserNo" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Email" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="IP Address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Unique ID" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Started date" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Started time" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Ended date" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Ended time" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Status" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Tracking Link" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q1.1. CQC number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q1.2. Re-enter CQC number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q2. Does the care home you work for have wifi for staff?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Comments:" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q3.1. Cost" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q3.2. Do not know which provider to use" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q3.3. Problems with the building/getting a signal" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q3.4. It's not a priority" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q3.5. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q4.1. Select a number:" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q4.2. Laptops" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q4.3. Personal smart phones" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q4.4. Work smart phones" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q5. Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q6.1. Personal smart phone" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q6.2. Work smart phone" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q6.3. Laptop" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q6.4. None, we don't use any other devices for remote consultations" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q6.5. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.1. Not enough tablet devices for staff to use for this purpose" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.4. No or poor wifi connection" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.5. Not enough staff have the time or skills" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.6. Our local GP does not offer video consultations" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.7. Our local GP uses software that does not work with our iPads and other devices" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.8. There are no issues that make it difficult to facilitate calls" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.9. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q7.10. Please add any further details:" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q8.1. Digital care planning software" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q8.2. Digital medication management system" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q8.3. Remote monitoring tools (to monitor residents' health and vital signs)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q8.4. Tools/devices to help residents make video calls to their family" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q8.5. Prescription ordering system" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q8.6. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q9.1. Digital care planning software" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q9.2. Digital medical management system" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q9.3. Remote monitoring tools (to monitor residents' health and vital signs)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q9.4. Tools/devices to help residents make video calls to their family" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q9.5. Prescription ordering system" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q9.6. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q10. How confident are staff when using devices such as laptops, tablets and iPads?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q11.1. We don't have any IT (e.g. laptops, desktop computers)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q11.2. We have devices but we don't use them" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q11.3. By calling our IT helpdesk" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q11.4. By a company technical contact onsite or at another location" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q11.5. By an external organisation" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q11.6. By working it out ourselves" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q11.7. By running our own formal IT training" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q11.8. Informally with colleagues showing each other" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q11.9. Other (please specify):" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q12. How many residents does your care home have capacity for?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q13.1. Recipient name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q13.2. Care home name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q13.3. First line of address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q13.4. Second line of address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q13.5. City/town" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q13.6. County" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q13.7. Post code" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q13.8. Contact telephone number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q13.9. Contact email address (NHS Mail or other)" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q14. Is the contact email address you have given the same one that you would like to be set up on the iPad (if you were to be selected to receive one)?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q15. Is there a digital champion (someone who can help  others to use the iPad) in your care home?" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q16.1. I agree to the terms of use." size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="Q17. To continue with your application, you must now give us permission to share your details with our supplier (Apple) so that we can arrange to deliver a working iPad to you, if your application is successful. Your details will be held securely and will" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+                <Field name="If you have answered 'No' please explain why:" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\Survey Extracts\Synthetic\survey_extract_synthetic.csv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="72">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="175" y="606" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>Text</FieldType>
+              <Fields orderChanged="False">
+                <Field name="Q4.1. Select a number:" />
+                <Field name="UserID" selected="False" />
+                <Field name="UserNo" selected="False" />
+                <Field name="Name" selected="False" />
+                <Field name="Email" selected="False" />
+                <Field name="IP Address" selected="False" />
+                <Field name="Unique ID" selected="False" />
+                <Field name="Started date" selected="False" />
+                <Field name="Started time" selected="False" />
+                <Field name="Ended date" selected="False" />
+                <Field name="Ended time" selected="False" />
+                <Field name="Status" selected="False" />
+                <Field name="Tracking Link" selected="False" />
+                <Field name="Q1.1. CQC number" selected="False" />
+                <Field name="Q1.2. Re-enter CQC number" selected="False" />
+                <Field name="Q2. Does the care home you work for have wifi for staff?" selected="False" />
+                <Field name="Comments:" selected="False" />
+                <Field name="Q3.1. Cost" selected="False" />
+                <Field name="Q3.2. Do not know which provider to use" selected="False" />
+                <Field name="Q3.3. Problems with the building/getting a signal" selected="False" />
+                <Field name="Q3.4. It's not a priority" selected="False" />
+                <Field name="Q3.5. Other (please specify):" selected="False" />
+                <Field name="Q4.2. Laptops" selected="False" />
+                <Field name="Q4.3. Personal smart phones" selected="False" />
+                <Field name="Q4.4. Work smart phones" selected="False" />
+                <Field name="Q5. Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?" selected="False" />
+                <Field name="Q6.1. Personal smart phone" selected="False" />
+                <Field name="Q6.2. Work smart phone" selected="False" />
+                <Field name="Q6.3. Laptop" selected="False" />
+                <Field name="Q6.4. None, we don't use any other devices for remote consultations" selected="False" />
+                <Field name="Q6.5. Other (please specify):" selected="False" />
+                <Field name="Q7.1. Not enough tablet devices for staff to use for this purpose" selected="False" />
+                <Field name="Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)" selected="False" />
+                <Field name="Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations" selected="False" />
+                <Field name="Q7.4. No or poor wifi connection" selected="False" />
+                <Field name="Q7.5. Not enough staff have the time or skills" selected="False" />
+                <Field name="Q7.6. Our local GP does not offer video consultations" selected="False" />
+                <Field name="Q7.7. Our local GP uses software that does not work with our iPads and other devices" selected="False" />
+                <Field name="Q7.8. There are no issues that make it difficult to facilitate calls" selected="False" />
+                <Field name="Q7.9. Other (please specify):" selected="False" />
+                <Field name="Q7.10. Please add any further details:" selected="False" />
+                <Field name="Q8.1. Digital care planning software" selected="False" />
+                <Field name="Q8.2. Digital medication management system" selected="False" />
+                <Field name="Q8.3. Remote monitoring tools (to monitor residents' health and vital signs)" selected="False" />
+                <Field name="Q8.4. Tools/devices to help residents make video calls to their family" selected="False" />
+                <Field name="Q8.5. Prescription ordering system" selected="False" />
+                <Field name="Q8.6. Other (please specify):" selected="False" />
+                <Field name="Q9.1. Digital care planning software" selected="False" />
+                <Field name="Q9.2. Digital medical management system" selected="False" />
+                <Field name="Q9.3. Remote monitoring tools (to monitor residents' health and vital signs)" selected="False" />
+                <Field name="Q9.4. Tools/devices to help residents make video calls to their family" selected="False" />
+                <Field name="Q9.5. Prescription ordering system" selected="False" />
+                <Field name="Q9.6. Other (please specify):" selected="False" />
+                <Field name="Q10. How confident are staff when using devices such as laptops, tablets and iPads?" selected="False" />
+                <Field name="Q11.1. We don't have any IT (e.g. laptops, desktop computers)" selected="False" />
+                <Field name="Q11.2. We have devices but we don't use them" selected="False" />
+                <Field name="Q11.3. By calling our IT helpdesk" selected="False" />
+                <Field name="Q11.4. By a company technical contact onsite or at another location" selected="False" />
+                <Field name="Q11.5. By an external organisation" selected="False" />
+                <Field name="Q11.6. By working it out ourselves" selected="False" />
+                <Field name="Q11.7. By running our own formal IT training" selected="False" />
+                <Field name="Q11.8. Informally with colleagues showing each other" selected="False" />
+                <Field name="Q11.9. Other (please specify):" selected="False" />
+                <Field name="Q12. How many residents does your care home have capacity for?" selected="False" />
+                <Field name="Q13.1. Recipient name" selected="False" />
+                <Field name="Q13.2. Care home name" selected="False" />
+                <Field name="Q13.3. First line of address" selected="False" />
+                <Field name="Q13.4. Second line of address" selected="False" />
+                <Field name="Q13.5. City/town" selected="False" />
+                <Field name="Q13.6. County" selected="False" />
+                <Field name="Q13.7. Post code" selected="False" />
+                <Field name="Q13.8. Contact telephone number" selected="False" />
+                <Field name="Q13.9. Contact email address (NHS Mail or other)" selected="False" />
+                <Field name="Q14. Is the contact email address you have given the same one that you would like to be set up on the iPad (if you were to be selected to receive one)?" selected="False" />
+                <Field name="Q15. Is there a digital champion (someone who can help  others to use the iPad) in your care home?" selected="False" />
+                <Field name="Q16.1. I agree to the terms of use." selected="False" />
+                <Field name="Q17. To continue with your application, you must now give us permission to share your details with our supplier (Apple) so that we can arrange to deliver a working iPad to you, if your application is successful. Your details will be held securely and will" selected="False" />
+                <Field name="If you have answered 'No' please explain why:" selected="False" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>Replace([_CurrentField_], '4+', '4')</Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Replace([_CurrentField_], '4+', '4')</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="75">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="427" y="618" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="UserID" selected="False" />
+                <SelectField field="UserNo" selected="False" />
+                <SelectField field="Name" selected="False" />
+                <SelectField field="Email" selected="False" />
+                <SelectField field="IP Address" selected="False" />
+                <SelectField field="Unique ID" selected="False" />
+                <SelectField field="Started date" selected="False" />
+                <SelectField field="Started time" selected="False" />
+                <SelectField field="Ended date" selected="False" />
+                <SelectField field="Ended time" selected="False" />
+                <SelectField field="Status" selected="False" />
+                <SelectField field="Tracking Link" selected="False" />
+                <SelectField field="Q13.1. Recipient name" selected="False" />
+                <SelectField field="Q13.2. Care home name" selected="False" />
+                <SelectField field="Q13.3. First line of address" selected="False" />
+                <SelectField field="Q13.4. Second line of address" selected="False" />
+                <SelectField field="Q13.5. City/town" selected="False" />
+                <SelectField field="Q13.6. County" selected="False" />
+                <SelectField field="Q13.7. Post code" selected="False" />
+                <SelectField field="Q13.8. Contact telephone number" selected="False" />
+                <SelectField field="Q13.9. Contact email address (NHS Mail or other)" selected="False" />
+                <SelectField field="Q14. Is the contact email address you have given the same one that you would like to be set up on the iPad (if you were to be selected to receive one)?" selected="False" />
+                <SelectField field="Q15. Is there a digital champion (someone who can help  others to use the iPad) in your care home?" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="83">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="511" y="618" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Q17. To continue with your application, you must now give us permission to share your details with our supplier (Apple) so that we can arrange to deliver a working iPad to you, if your application is successful. Your details will be held securely and will" selected="True" rename="Q17. Permission to share details with supplier" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="726.0001" y="62.00006" width="1441" height="1008" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Survey Logic Model</Caption>
+          <Style TextColor="#314c4a" FillColor="#d9f2ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="752" y="446.0002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="location_id" />
+                <Field field="location_id" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Q1.1. CQC number" />
+                <Field field="Q1.2. Re-enter CQC number" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="896" y="106.0001" width="685" height="807.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Priority One</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="32">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1077" y="348.0003" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Q4.1. Select a number:] &gt; 0</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>&gt;</Operator>
+                    <Field>Q4.1. Select a number:</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 12:46:52</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>0</Operand>
+                      <StartDate>2020-09-22 12:46:52</StartDate>
+                      <EndDate>2020-09-22 12:46:52</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Q4.1. Select a number:] &gt; 0</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="33">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1077" y="591.9999" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Q4.1. Select a number:] &gt; 0</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>&gt;</Operator>
+                    <Field>Q4.1. Select a number:</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 12:46:52</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>0</Operand>
+                      <StartDate>2020-09-22 12:46:52</StartDate>
+                      <EndDate>2020-09-22 12:46:52</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Q4.1. Select a number:] &gt; 0</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="34">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1195" y="534" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Q4.1. Select a number:] &gt; 1</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>&gt;</Operator>
+                    <Field>Q4.1. Select a number:</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 12:46:52</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>1</Operand>
+                      <StartDate>2020-09-22 12:46:52</StartDate>
+                      <EndDate>2020-09-22 12:46:52</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Q4.1. Select a number:] &gt; 1</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="36">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1075" y="474.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Q4.1. Select a number:] &gt; 1</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>&gt;</Operator>
+                    <Field>Q4.1. Select a number:</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 12:46:52</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>1</Operand>
+                      <StartDate>2020-09-22 12:46:52</StartDate>
+                      <EndDate>2020-09-22 12:46:52</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Q4.1. Select a number:] &gt; 1</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="39">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1243" y="330.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)] = "Yes"
+OR
+[Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations] = "Yes"</Expression>
+                  <Mode>Custom</Mode>
+                  <Simple>
+                    <Operator>=</Operator>
+                    <Field>Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 13:05:03</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>
+                      </Operand>
+                      <StartDate>2020-09-22 13:05:03</StartDate>
+                      <EndDate>2020-09-22 13:05:03</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do no...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="40">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1329" y="586.0005" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)] = "Yes"
+OR
+[Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations] = "Yes"</Expression>
+                  <Mode>Custom</Mode>
+                  <Simple>
+                    <Operator>=</Operator>
+                    <Field>Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 13:05:03</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>
+                      </Operand>
+                      <StartDate>2020-09-22 13:05:03</StartDate>
+                      <EndDate>2020-09-22 13:05:03</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do no...</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="43">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+                <Position x="1232" y="746.0002" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <ByName_ErrorMode>Warning</ByName_ErrorMode>
+                  <ByName_OutputMode>All</ByName_OutputMode>
+                  <Mode>ByName</Mode>
+                  <SetOutputOrder value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+            </Node>
+            <Node ToolID="44">
+              <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+                <Position x="1232" y="806.0002" width="60" height="22" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Text>One IPad</Text>
+                  <Font name="Arial" size="8.25" style="0" />
+                  <TextColor name="Black" />
+                  <FillColor name="White" />
+                  <Shape shape="0" />
+                  <Justification Justification="4" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+            </Node>
+            <Node ToolID="45">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+                <Position x="1077" y="238.0004" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <ByName_ErrorMode>Warning</ByName_ErrorMode>
+                  <ByName_OutputMode>All</ByName_OutputMode>
+                  <Mode>ByName</Mode>
+                  <SetOutputOrder value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+            </Node>
+            <Node ToolID="46">
+              <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+                <Position x="1065" y="214.0001" width="72" height="24" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Text>Two IPads</Text>
+                  <Font name="Arial" size="8.25" style="0" />
+                  <TextColor name="Black" />
+                  <FillColor name="White" />
+                  <Shape shape="0" />
+                  <Justification Justification="4" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+            </Node>
+            <Node ToolID="37">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+                <Position x="1495" y="378.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <ByName_ErrorMode>Warning</ByName_ErrorMode>
+                  <ByName_OutputMode>All</ByName_OutputMode>
+                  <Mode>ByName</Mode>
+                  <SetOutputOrder value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+            </Node>
+            <Node ToolID="18">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="921.0001" y="360.0003" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[care_homes_beds] &gt;= 40</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>&gt;=</Operator>
+                    <Field>care_homes_beds</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-23 12:32:38</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>40</Operand>
+                      <StartDate>2020-09-23 12:32:38</StartDate>
+                      <EndDate>2020-09-23 12:32:38</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[care_homes_beds] &gt;= 40</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="42">
+              <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+                <Position x="1496" y="432.0004" width="60" height="24" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Text>No IPad</Text>
+                  <Font name="Arial" size="8.25" style="0" />
+                  <TextColor name="Black" />
+                  <FillColor name="White" />
+                  <Shape shape="0" />
+                  <Justification Justification="4" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+            </Node>
+            <Node ToolID="55">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1170" y="150.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="'Two IPads'" field="Decision" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Decision = 'Two IPads'
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="56">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1350" y="798.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="'One IPad'" field="Decision" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Decision = 'One IPad'
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="86">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1290" y="150.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="&quot;Priority One&quot;" field="Priority" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Priority = "Priority One"
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="87">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1470" y="798.0001" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="&quot;Priority One&quot;" field="Priority" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Priority = "Priority One"
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="60">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="1615" y="214" width="527" height="592" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Priority Two</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="53">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1640" y="608" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Tablet / Beds] &gt; 1</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>&gt;</Operator>
+                    <Field>Tablet / Beds</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 14:15:44</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>1</Operand>
+                      <StartDate>2020-09-22 14:15:44</StartDate>
+                      <EndDate>2020-09-22 14:15:44</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Tablet / Beds] &gt; 1</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="54">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1902" y="690" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="'Phase Three'" field="Decision" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Decision = 'Phase Three'
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="59">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1902" y="318" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="'No IPad'" field="Decision" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Decision = 'No IPad'
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="58">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1688" y="258" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Tablet / Beds] &gt; 2</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>&gt;</Operator>
+                    <Field>Tablet / Beds</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 14:15:44</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>2</Operand>
+                      <StartDate>2020-09-22 14:15:44</StartDate>
+                      <EndDate>2020-09-22 14:15:44</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Tablet / Beds] &gt; 2</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="61">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1760" y="632" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "Yes"</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>=</Operator>
+                    <Field>Q7.1. Not enough tablet devices for staff to use for this purpose</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 15:13:29</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>Yes</Operand>
+                      <StartDate>2020-09-22 15:13:29</StartDate>
+                      <EndDate>2020-09-22 15:13:29</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "Yes"</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="62">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1902" y="594" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="'Phase One'" field="Decision" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Decision = 'Phase One'
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="63">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1772" y="452" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "Yes"</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>=</Operator>
+                    <Field>Q7.1. Not enough tablet devices for staff to use for this purpose</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-09-22 15:13:29</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>Yes</Operand>
+                      <StartDate>2020-09-22 15:13:29</StartDate>
+                      <EndDate>2020-09-22 15:13:29</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "Yes"</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="64">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1902" y="402" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="'Phase Two'" field="Decision" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Decision = 'Phase Two'
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="65">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1902" y="498" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="'Phase Four'" field="Decision" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Decision = 'Phase Four'
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="88">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="2022" y="690" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="&quot;Priority Two&quot;" field="Priority" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Priority = "Priority Two"
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="89">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="2022" y="594" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="&quot;Priority Two&quot;" field="Priority" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Priority = "Priority Two"
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="90">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="2022" y="498" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="&quot;Priority Two&quot;" field="Priority" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Priority = "Priority Two"
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="91">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="2022" y="402" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="&quot;Priority Two&quot;" field="Priority" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Priority = "Priority Two"
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="92">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="2022" y="318" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="Null()" field="Priority" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Priority = Null()
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="76">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1554" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="'No Match'" field="Decision" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Decision = 'No Match'
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="776" y="281.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="([Q4.1. Select a number:]/[care_homes_beds])*40" field="Tablet / Beds" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Tablet / Beds = ([Q4.1. Select a number:]/[care_homes_beds])*40
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="77">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1364" y="950" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="Null()" field="Tablet / Beds" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Tablet / Beds = Null()
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="78">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="991.9999" y="949.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="'No Match'" field="location_id" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[location_id = 'No Match'
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="79">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1184" y="950.0002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="'No Match'" field="care_homes_beds" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[care_homes_beds = 'No Match'
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="84">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="751.0001" y="833.9996" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="care_homes_beds" action="Median" rename="Median_care_homes_beds" />
+                <SummarizeField field="care_homes_beds" action="Avg" rename="Avg_care_homes_beds" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="93">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1686" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="Null()" field="Priority" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Priority = Null()
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="56" y="54" width="622" height="386" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>CQC Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="81.00001" y="120.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>CQC_carehomes.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="location_type" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_street_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_address_line_2" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_city" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_county" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_postal_code" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_web_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_phone" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="registered_manager" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_region" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_local_authority" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="care_homes_beds" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_hsca_start_date" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_inspection_directorate" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_primary_inspection_category" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_latest_overall_rating" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_type_or_sector" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="location_uprn" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="provider_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="provider_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="provider_type_or_sector" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="provider_inspection_directorate" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="provider_ownership_type" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="provider_phone_formatted" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="provider_web_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="current_service" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="best_available_service" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="resident_internet_flag" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="match_similarity" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="carehomes_co_uk_record" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="Field_33" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="Field_34" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+                <Field name="Field_35" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_carehomes.csv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="213" y="120.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Field_33" selected="False" />
+                <SelectField field="Field_34" selected="False" />
+                <SelectField field="Field_35" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="81.00008" y="323.9998" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>CQC_providers.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="brand_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="brand_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="companies_house_number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="charity_number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="provider_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="location_hsca_start_date" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="type_or_sector" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="inspection_directorate" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="primary_inspection_category" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="ownership_type" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="telephone_number" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="web_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="street_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="address_line_2" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="city" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="county" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="postal_code" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="paf_uprn_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="local_authority" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="region" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="latitude" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="longitude" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="parliamentary_constituency" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="nominated_individual_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="main_partner_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="count_of_locations" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="count_of_carehomes" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="count_of_domiciliary" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="count_of_beds" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="average_beds" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="regions_covered" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="ranking" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="provider_tshirt_size" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="Field_35" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+                <Field name="Field_36" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\CQC_providers.csv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="213" y="324" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Field_35" selected="False" />
+                <SelectField field="Field_36" selected="False" />
+                <SelectField field="Field_33" selected="False" />
+                <SelectField field="Field_34" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="81.00014" y="228" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>connectivity_upgrade.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="location_type" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_street_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_address_line_2" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_city" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_county" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_postal_code" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_web_address" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_phone" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="registered_manager" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_region" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="local_authority" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="care_homes_beds" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_uprn" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="provider_id" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="provider_name" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="public_sector_flag" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="resident_internet_flag" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="location_tshirt_size" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="provider_tshirt_size" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="current_service" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="service_rating" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="best_available_service" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="available_service_rating" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="upgrade_path" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="outdoor_4g_coverage" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="indoor_4g_coverage" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="rgc_eligibility" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="rgc_ineligibility_reason" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="Field_31" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+                <Field name="Field_32" size="254" source="File: D:\Users\Craig.Shenton\Database\Data\Data Model Inputs\CQC Raw Data\connectivity_upgrade.csv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="488.0001" y="98.00001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">Data\Data Model Inputs\CQC Raw Data\CQC_master.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>CQC_master.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="213.0001" y="228" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Field_31" selected="False" />
+                <SelectField field="Field_32" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="392.0001" y="110" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="care_homes_beds" selected="True" type="FixedDecimal" size="254.0" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="73">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="439" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="location_type" selected="False" />
+                <SelectField field="location_name" selected="False" />
+                <SelectField field="location_street_address" selected="False" />
+                <SelectField field="location_address_line_2" selected="False" />
+                <SelectField field="location_city" selected="False" />
+                <SelectField field="location_county" selected="False" />
+                <SelectField field="location_postal_code" selected="False" />
+                <SelectField field="location_web_address" selected="False" />
+                <SelectField field="location_phone" selected="False" />
+                <SelectField field="registered_manager" selected="False" />
+                <SelectField field="location_region" selected="False" />
+                <SelectField field="location_local_authority" selected="False" />
+                <SelectField field="location_hsca_start_date" selected="False" />
+                <SelectField field="location_inspection_directorate" selected="False" />
+                <SelectField field="location_primary_inspection_category" selected="False" />
+                <SelectField field="location_latest_overall_rating" selected="False" />
+                <SelectField field="location_type_or_sector" selected="False" />
+                <SelectField field="location_uprn" selected="False" />
+                <SelectField field="provider_id" selected="False" />
+                <SelectField field="provider_name" selected="False" />
+                <SelectField field="provider_type_or_sector" selected="False" />
+                <SelectField field="provider_inspection_directorate" selected="False" />
+                <SelectField field="provider_ownership_type" selected="False" />
+                <SelectField field="provider_phone_formatted" selected="False" />
+                <SelectField field="provider_web_address" selected="False" />
+                <SelectField field="current_service" selected="False" />
+                <SelectField field="best_available_service" selected="False" />
+                <SelectField field="resident_internet_flag" selected="False" />
+                <SelectField field="match_similarity" selected="False" />
+                <SelectField field="carehomes_co_uk_record" selected="False" />
+                <SelectField field="local_authority" selected="False" />
+                <SelectField field="public_sector_flag" selected="False" />
+                <SelectField field="location_tshirt_size" selected="False" />
+                <SelectField field="provider_tshirt_size" selected="False" />
+                <SelectField field="service_rating" selected="False" />
+                <SelectField field="available_service_rating" selected="False" />
+                <SelectField field="upgrade_path" selected="False" />
+                <SelectField field="outdoor_4g_coverage" selected="False" />
+                <SelectField field="indoor_4g_coverage" selected="False" />
+                <SelectField field="rgc_eligibility" selected="False" />
+                <SelectField field="rgc_ineligibility_reason" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="82">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="546" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[care_homes_beds] &gt; 0</Expression>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>&gt;</Operator>
+                <Field>care_homes_beds</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-09-24 10:09:58</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>0</Operand>
+                  <StartDate>2020-09-24 10:09:58</StartDate>
+                  <EndDate>2020-09-24 10:09:58</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[care_homes_beds] &gt; 0</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Output" />
+      <Destination ToolID="81" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output26" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="15" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="83" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Output" />
+      <Destination ToolID="14" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="True" />
+      <Destination ToolID="14" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Join" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Right" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Join" />
+      <Destination ToolID="80" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Join" />
+      <Destination ToolID="84" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="True" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="32" Connection="False" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="True" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="33" Connection="False" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="36" Connection="False" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="39" Connection="True" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="40" Connection="True" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="34" Connection="True" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="39" Connection="False" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="40" Connection="False" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="False" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="True" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="True" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="False" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="88" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection name="#7">
+      <Origin ToolID="90" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection name="#8">
+      <Origin ToolID="93" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="True" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="False" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="88" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="92" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="True" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="False" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="False" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="True" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="False" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="True" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Output" />
+      <Destination ToolID="90" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Output" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="77" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>data_model_v0.3</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
