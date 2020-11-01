@@ -27,8 +27,11 @@ Will receive 1 device
 
 ## Logic Model
 
-|Route|Flag 1|Flag 2|Flag 3|Flag 4|Flag 5|Flag 6|Priority|Number of iPads|
-|-|-|-|-|-|-|-|-|-|
+There are only siz logic gates in the model. Each gate is based on answers to survey responses we recived.
+Depending on the responses, each care hame can move down only one route to a particular Priority and Allocation of Devices.
+
+|Route|Gate 1|Gate 2|Gate 3|Gate 4|Gate 5|Gate 6|Priority|Number of iPads|
+|-|-|-|-|-|-|-|-|-:|
 |1|More than 40 Residents|No current devices| | | |	|Priority One|2|
 |2|More than 40 Residents| |Devices not adequate| | | |Priority One	|2|
 |3|Less than 40 Residents|No current devices| | | |	|Priority One	|1|
