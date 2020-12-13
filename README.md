@@ -35,7 +35,7 @@ Will receive 1 device
 
 ## Logic Model
 
-A logic model was developed to apply the eligibility criteria outlined above. Please not that local intelligence from CQC, Local Authority, and NHS colleagues were used in the final decision making criteria. There are only six logic gates in the model. Each gate is based on answers to survey responses we received. Depending on the responses, each care home can move down only one route to a particular Priority and Allocation of Devices.
+A logic model was developed to apply the eligibility criteria outlined above. Please note that local intelligence from CQC, Local Authority, and NHS colleagues were used in the final decision making criteria. There are only six logic gates in the model. Each gate is based on answers to survey responses we received. Depending on the responses, each care home can move down only one route to a particular Priority and Allocation of Devices.
 
 |Route|Gate 1|Gate 2|Gate 3|Gate 4|Gate 5|Gate 6|Priority|Number of iPads|
 |-|-|-|-|-|-|-|-|-:|
