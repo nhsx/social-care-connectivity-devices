@@ -1,7 +1,11 @@
 # Social Care Connectivity & Devices
-NHSX led programme to procure and gift 11,000 (data-enabled where needed) iPads to care homes in response to COVID-19. This is so that staff can access remote health consultations for the people in their care. We plan to distribute the iPads by autumn 2020 ahead of a second wave of COVID-19 and winter pressures.
+An [NHSX led programme](https://www.nhsx.nhs.uk/covid-19-response/social-care/ipad-offer-care-homes/) to procure and gift 11,000 (data-enabled) iPads to care homes in response to COVID-19 ([Terms of use](https://www.nhsx.nhs.uk/covid-19-response/social-care/terms-use-and-eligibility-criteria-ipads-care-homes/)). This is so that staff can access remote health consultations for the people in their care.
+
+We are continuing to help care homes access digital tools and services. If you would like to be informed about any future offers from NHSX, [please register your details](https://www.smartsurvey.co.uk/s/2UGJAW/) and share your comments.
 
 ## How we prioritise the eligibility criteria
+
+[Prioritisation of the devices](https://www.nhsx.nhs.uk/covid-19-response/social-care/eligibility-criteria-ipad-offer/) will be to care homes in England that receive all or some of their funding for residential care from the NHS or from a local authority and apply for a device using our order form (now closed).
 
 ### Priority 1
 
@@ -29,8 +33,7 @@ Will receive 1 device
 
 ## Logic Model
 
-There are only six logic gates in the model. Each gate is based on answers to survey responses we received.
-Depending on the responses, each care home can move down only one route to a particular Priority and Allocation of Devices.
+A logic model was developed to apply the eligibility criteria outlined above. Please not that local intelligence from CQC, Local Authority, and NHS colleagues were used in the final decision making criteria. There are only six logic gates in the model. Each gate is based on answers to survey responses we received. Depending on the responses, each care home can move down only one route to a particular Priority and Allocation of Devices.
 
 |Route|Gate 1|Gate 2|Gate 3|Gate 4|Gate 5|Gate 6|Priority|Number of iPads|
 |-|-|-|-|-|-|-|-|-:|
