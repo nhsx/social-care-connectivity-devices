@@ -15,8 +15,10 @@ We are continuing to help care homes access digital tools and services. If you w
 
 If a care home has more devices, but answered the following question: "Which of the following issues may make it difficult to facilitate video calls with GPs and health and care professionals?" with either:
 - **A:** "Our tablet devices are not good enough (i.e. they’re too old/slow/do not have the right features)"
+
 *OR*
 - **B:** "Our tablet are reserved for-or locked down to- other things and cannot be used for remote consultations"
+
 *OR*
 - **C:** "Our tablet are not capable of assiting you with remote consultations with health care professionals"
 
