@@ -42,9 +42,6 @@
               <DefaultAnnotationText>eligibility_logic_model_results.csv</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
@@ -63,6 +60,7 @@
                 <SelectField field="Date Ended" selected="True" />
                 <SelectField field="Q1.1. CQC number" selected="True" />
                 <SelectField field="Q4.1. Number of Devices" selected="False" />
+                <SelectField field="Q5. Are these iPad or Android tablet devices capable of assisting you with remote consultations with health and care professionals? (e.g. can they support video calls?)" selected="True" />
                 <SelectField field="Q7.1. Not enough tablet devices for staff to use for this purpose" selected="True" />
                 <SelectField field="Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)" selected="True" />
                 <SelectField field="Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations" selected="True" />
@@ -110,7 +108,7 @@
     </Node>
     <Node ToolID="129">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="54" y="54" width="948.0006" height="355" />
+        <Position x="54" y="58" width="948.0006" height="325" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -126,113 +124,9 @@
         </Annotation>
       </Properties>
       <ChildNodes>
-        <Node ToolID="124">
-          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="198" y="134" width="208.1408" height="205" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <Caption>Add Digital Maturity Scores</Caption>
-              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-              <Disabled value="False" />
-              <Folded value="False" />
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <ChildNodes>
-            <Node ToolID="100">
-              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="223.0006" y="178" />
-              </GuiSettings>
-              <Properties>
-                <Configuration>
-                  <FormulaFields>
-                    <FormulaField expression="IF [(survey)_Q2. Does the care home you work for have wifi (wireless internet) for staff?] = &quot;Yes, we have good wifi coverage and staff can get online anywhere in the building&quot; THEN 3 ELSE 0 ENDIF + &#xA;IF [(survey)_Q2. Does the care home you work for have wifi (wireless internet) for staff?] =&quot;Yes, we have wifi but it's only in certain parts of the building&quot; THEN 2 ELSE 0 ENDIF +&#xA;IF [(survey)_Q2. Does the care home you work for have wifi (wireless internet) for staff?] =&quot;Yes we have wifi but it's too poor to use for remote video calls&quot; THEN 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q2. Does the care home you work for have wifi (wireless internet) for staff?] =&quot;Yes we have wifi but only some staff have access to it&quot; THEN 1 ELSE 0 ENDIF&#xA;&#xA;&#xA;" field="Does the care home you work for have wifi (wireless internet) for staff?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q3.1. Cost] =&quot;Yes&quot; THEN 2 ELSE 0 ENDIF +&#xA;IF [(survey)_Q3.2. Do not know which provider to use]=&quot;Yes&quot; THEN 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q3.3. Problems with the building/getting a signal] = &quot;Yes&quot; THEN 2 ELSE 0 ENDIF + &#xA;IF [(survey)_Q3.5. It's not a priority] = &quot;Yes&quot; THEN 0 ELSE0 ENDIF" field="What are the main reasons for not having good wifi throughout the care home?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q5. Are these iPad or Android tablet devices capable of assisting you with remote consultations with health and care professionals? (e.g. can they support video calls?)] =  &quot;yes&quot; THEN 3 ELSE 0 ENDIF +&#xA;IF [(survey)_Q5. Are these iPad or Android tablet devices capable of assisting you with remote consultations with health and care professionals? (e.g. can they support video calls?)] = &quot;No&quot; THEN 1  ELSE 0 ENDIF +&#xA;IF [(survey)_Q5. Are these iPad or Android tablet devices capable of assisting you with remote consultations with health and care professionals? (e.g. can they support video calls?)] = &quot;Not sure&quot; THEN 1  ELSE 0 ENDIF" field="Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q6.1. Desktop PC] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q6.2. Personal smart phone] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q6.3. Work smart phone] = &quot;Yes&quot; THEN 2 ELSE 0 ENDIF +&#xA;IF [(survey)_Q6.4. Laptop] = &quot;Yes&quot; THEN 3 ELSE 0 ENDIF +&#xA;IF [(survey)_Q6.5. None, we don't use any other devices for remote consultations] = &quot;Yes&quot; THEN 0 ELSE 0 ENDIF" field="Which other devices do you use in your care home for remote consultations with GPs or other health and care professionals?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q7.1. Not enough tablet devices for staff to use for this purpose] = &quot;Yes&quot; THEN 2 ELSE 0 ENDIF +&#xA;IF [(survey)_Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)]= &quot;Yes&quot; THEN 1 ELSE 0 ENDIF + &#xA;IF [(survey)_Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF + &#xA;IF [(survey)_Q7.4. No or poor wifi connection] = &quot;Yes&quot; THEN 0  ELSE 0 ENDIF +&#xA;IF [(survey)_Q7.5. Not enough staff have the time or skills] = &quot;Yes&quot; THEN 2 ELSE 0 ENDIF +&#xA;IF [(survey)_Q7.7. Our local GP uses software that does not work with our iPads and other devices] = &quot;Yes&quot; THEN 2 ELSE 0 ENDIF + &#xA;IF [(survey)_Q7.8. There are no issues that make it difficult to facilitate calls] = &quot;Yes&quot; THEN 3 ELSE 0 ENDIF" field="Which of the following issues may make it difficult to hold video calls with GPs and health and care professionals?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q8.1. Digital care planning software] = &quot;Yes&quot; THEN 3 ELSE 0 ENDIF +&#xA;IF [(survey)_Q8.2. Digital medication management system] = &quot;Yes&quot; THEN 3 ELSE 0 ENDIF +&#xA;IF [(survey)_Q8.3. Remote monitoring tools (to monitor residents' temperature, blood pressure and other observations)] = &quot;Yes&quot; THEN 3 ELSE 0 ENDIF +&#xA;IF [(survey)_Q8.4. Tools/devices to help residents make video calls to their family]  = &quot;Yes&quot; THEN 3 ELSE 0 ENDIF +&#xA;IF [(survey)_Q8.5. Surgery or NHS apps for making GP appointments] = &quot;Yes&quot; THEN 3 ELSE 0 ENDIF +&#xA;IF [(survey)_Q8.6. Prescription ordering via surgery/ NHS apps]= &quot;Yes&quot; THEN 3 ELSE 0 ENDIF +&#xA;IF [(survey)_Q8.7. None] = &quot;Yes&quot; THEN 0&#xA;ELSE 0 ENDIF" field="What other software tools/devices does your care home have access to:" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q10. How confident are staff when using devices such as laptops, tablets and iPads?] =&quot;Very confident&quot; THEN 3 ELSE 0 ENDIF + &#xA;IF [(survey)_Q10. How confident are staff when using devices such as laptops, tablets and iPads?] = &quot;Mostly confident&quot; THEN 3 ELSE 0 ENDIF +&#xA;IF [(survey)_Q10. How confident are staff when using devices such as laptops, tablets and iPads?] = &quot;Confident&quot; THEN 2 ELSE 0 ENDIF + &#xA;IF [(survey)_Q10. How confident are staff when using devices such as laptops, tablets and iPads?] = &quot;Not very confident&quot; THEN 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q10. How confident are staff when using devices such as laptops, tablets and iPads?] = &quot;Not at all confident&quot; THEN 0&#xA; ELSE 0 ENDIF" field="How confident are staff when using devices such as laptops, tablets and iPads?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q11.1. We don't have any IT (e.g. laptops, desktop computers)] = &quot;Yes&quot; THEN 0 ELSE 0 ENDIF + &#xA;IF [(survey)_Q11.2. We have devices but we don't use them] = &quot;Yes&quot; THEN 0 ELSE 0 ENDIF + &#xA;IF [(survey)_Q11.3. By calling our internal IT helpdesk] = &quot;Yes&quot; THEN 2 ELSE 0 ENDIF + &#xA;IF [(survey)_Q11.4. By a company technical contact onsite or at another location] = &quot;Yes&quot; THEN 3 ELSE 0 ENDIF + &#xA;IF [(survey)_Q11.6. By working it out ourselves] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF + &#xA;IF [(survey)_Q11.7. By running our own formal IT training] = &quot;Yes&quot; THEN 2 ELSE 0 ENDIF + &#xA;IF [(survey)_Q11.8. Informally with colleagues showing each other] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF" field="How are IT devices currently supported in your care home? (please select all that apply)" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q14. Is there a digital champion (someone who can help  others to use the iPad) in your care home?] = &quot;Yes&quot; THEN 3 ELSE 0 ENDIF &#xA;&#xA;" field="Is there a digital champion (someone who can help others to use the iPad) in your care home?" size="8" type="Double" />
-                    <FormulaField expression="[Does the care home you work for have wifi (wireless internet) for staff?] + [What are the main reasons for not having good wifi throughout the care home?] + [Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?] + [Which other devices do you use in your care home for remote consultations with GPs or other health and care professionals?]+[Which of the following issues may make it difficult to hold video calls with GPs and health and care professionals?]+[What other software tools/devices does your care home have access to:]+[How confident are staff when using devices such as laptops, tablets and iPads?]+[How are IT devices currently supported in your care home? (please select all that apply)]+[Is there a digital champion (someone who can help others to use the iPad) in your care home?]" field="Total digital score" size="8" type="Double" />
-                    <FormulaField expression="0.1111111111" field="Assigned weight /100 equal for the 9 questions" size="8" type="Double" />
-                    <FormulaField expression="Round ([Total digital score]*[Assigned weight /100 equal for the 9 questions] ,1)&#xA;&#xA;&#xA;&#xA; &#xA;&#xA;" field="Digital Maturity Scores 2" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q2. Does the care home you work for have wifi (wireless internet) for staff?] = ' ' THEN 0  elseif [(survey)_Q2. Does the care home you work for have wifi (wireless internet) for staff?] = '-' then 0 ELSE 1 ENDIF " field="N1_Does the care home you work for have wifi (wireless internet) for staff?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q3.1. Cost] = '-' THEN 0 elseif [(survey)_Q3.1. Cost] = ' ' then 0 elseif [(survey)_Q3.1. Cost] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q3.2. Do not know which provider to use] = '-' THEN 0 elseif [(survey)_Q3.2. Do not know which provider to use] = ' ' then 0 elseif [(survey)_Q3.2. Do not know which provider to use] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF  [(survey)_Q3.3. Problems with the building/getting a signal] = '-' THEN 0 elseif [(survey)_Q3.3. Problems with the building/getting a signal] = ' ' then 0 &#xA;elseif [(survey)_Q3.3. Problems with the building/getting a signal] = &quot;Yes&quot; then 1 ELSE 0 ENDIF + &#xA;IF [(survey)_Q3.5. It's not a priority] = '-' THEN 0 elseif  [(survey)_Q3.5. It's not a priority] = ' ' then 0 &#xA;elseif [(survey)_Q3.5. It's not a priority] = &quot;Yes&quot; then 1 ELSE 0 ENDIF" field="N2_What are the main reasons for not having good wifi throughout the care home?" size="8" type="Double" />
-                    <FormulaField expression="IF  [(survey)_Q5. Are these iPad or Android tablet devices capable of assisting you with remote consultations with health and care professionals? (e.g. can they support video calls?)] = ' ' then 0 elseif [(survey)_Q5. Are these iPad or Android tablet devices capable of assisting you with remote consultations with health and care professionals? (e.g. can they support video calls?)] = '-' THEN 0 ELSE 1 ENDIF " field="N3_Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q6.1. Desktop PC] = '-' THEN 0 elseif [(survey)_Q6.1. Desktop PC] = ' ' then 0 elseif [(survey)_Q6.1. Desktop PC] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q6.2. Personal smart phone] = '-' THEN 0 elseif [(survey)_Q6.2. Personal smart phone] = ' ' then 0 elseif [(survey)_Q6.2. Personal smart phone] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q6.3. Work smart phone] = '-' THEN 0 elseif  [(survey)_Q6.3. Work smart phone] = &quot;Yes&quot; then 1 ELSE 0 ENDIF + &#xA;IF [(survey)_Q6.4. Laptop]  = '-' THEN 0 elseif  [(survey)_Q6.4. Laptop] = ' ' then 0  elseif [(survey)_Q6.4. Laptop] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q6.5. None, we don't use any other devices for remote consultations]  = '-' THEN 0 elseif [(survey)_Q6.5. None, we don't use any other devices for remote consultations] = &quot;Yes&quot; then 1 ELSE 0 ENDIF " field="N4_Which other devices do you use in your care home for remote consultations with GPs or other health and care professionals?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q7.1. Not enough tablet devices for staff to use for this purpose] = '-' THEN 0 elseif [(survey)_Q7.1. Not enough tablet devices for staff to use for this purpose] = ' ' then 0 elseif [(survey)_Q7.1. Not enough tablet devices for staff to use for this purpose] = &quot;Yes &quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)] = '-' THEN 0 elseif [(survey)_Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)]  = ' ' then 0  elseif [(survey)_Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)]  = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations] = '-' THEN 0 elseif [(survey)_Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations]  = ' ' then 0 elseif [(survey)_Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations]  = &quot;Yes&quot; then 1 ELSE 0 ENDIF + &#xA;IF [(survey)_Q7.4. No or poor wifi connection]  = '-' THEN 0 elseif [(survey)_Q7.4. No or poor wifi connection] = ' ' then 0 elseif [(survey)_Q7.4. No or poor wifi connection] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q7.5. Not enough staff have the time or skills] = '-' THEN 0 elseif [(survey)_Q7.5. Not enough staff have the time or skills]  = ' ' then 0 elseif [(survey)_Q7.5. Not enough staff have the time or skills]  = &quot;Yes&quot; then 1 ELSE 0 ENDIF + &#xA;&#xA;IF [(survey)_Q7.6. Our local GP does not offer video consultations] = '-' THEN 0 elseif [(survey)_Q7.6. Our local GP does not offer video consultations] = ' ' then 0 elseif [(survey)_Q7.6. Our local GP does not offer video consultations] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;&#xA;IF [(survey)_Q7.7. Our local GP uses software that does not work with our iPads and other devices] = '-' THEN 0 elseif [(survey)_Q7.7. Our local GP uses software that does not work with our iPads and other devices] = ' ' then 0 elseif [(survey)_Q7.7. Our local GP uses software that does not work with our iPads and other devices] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;&#xA;IF  [(survey)_Q7.8. There are no issues that make it difficult to facilitate calls] = '-' THEN 0 elseif [(survey)_Q7.8. There are no issues that make it difficult to facilitate calls] = ' ' then 0 elseif [(survey)_Q7.8. There are no issues that make it difficult to facilitate calls] = &quot;Yes&quot; then 1 ELSE 0 ENDIF&#xA;&#xA;&#xA;&#xA;" field="N5_Which of the following issues may make it difficult to hold video calls with GPs and health and care professionals?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q8.1. Digital care planning software] = '-' THEN 0 elseif [(survey)_Q8.1. Digital care planning software] = ' ' then 0 elseif [(survey)_Q8.1. Digital care planning software] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q8.2. Digital medication management system] = '-' THEN 0 elseif [(survey)_Q8.2. Digital medication management system] = ' ' then 0 elseif [(survey)_Q8.2. Digital medication management system] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q8.3. Remote monitoring tools (to monitor residents' temperature, blood pressure and other observations)] = '-' THEN 0 elseif [(survey)_Q8.3. Remote monitoring tools (to monitor residents' temperature, blood pressure and other observations)] = ' ' then 0 elseif [(survey)_Q8.3. Remote monitoring tools (to monitor residents' temperature, blood pressure and other observations)] = &quot;Yes&quot; then 1 ELSE 0 ENDIF + &#xA;IF [(survey)_Q8.4. Tools/devices to help residents make video calls to their family]  = '-' THEN 0 elseif [(survey)_Q8.4. Tools/devices to help residents make video calls to their family] = ' ' then 0 elseif [(survey)_Q8.4. Tools/devices to help residents make video calls to their family] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q8.5. Surgery or NHS apps for making GP appointments] = '-' THEN 0 elseif  [(survey)_Q8.5. Surgery or NHS apps for making GP appointments] = ' ' then 0 elseif  [(survey)_Q8.5. Surgery or NHS apps for making GP appointments] = &quot;Yes&quot; then 1 ELSE 0 ENDIF + &#xA;&#xA;IF [(survey)_Q8.6. Prescription ordering via surgery/ NHS apps] = '-' THEN 0 elseif  [(survey)_Q8.6. Prescription ordering via surgery/ NHS apps] = ' ' then 0 elseif  [(survey)_Q8.6. Prescription ordering via surgery/ NHS apps] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;&#xA;IF [(survey)_Q8.7. None] = '-' THEN 0 elseif [(survey)_Q8.7. None] = ' ' then 0 elseif [(survey)_Q8.7. None] = &quot;Yes&quot; then 1 ELSE 0 ENDIF " field="N6_What other software tools/devices does your care home have access to:" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q10. How confident are staff when using devices such as laptops, tablets and iPads?] = ' ' THEN 0  elseif [(survey)_Q10. How confident are staff when using devices such as laptops, tablets and iPads?] = '-' then 0 ELSE 1 ENDIF " field="N7_How confident are staff when using devices such as laptops, tablets and iPads?" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q11.1. We don't have any IT (e.g. laptops, desktop computers)] = '-' THEN 0 elseif [(survey)_Q11.1. We don't have any IT (e.g. laptops, desktop computers)] = ' ' then 0 elseif [(survey)_Q11.1. We don't have any IT (e.g. laptops, desktop computers)] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF  [(survey)_Q11.2. We have devices but we don't use them] = '-' THEN 0 elseif [(survey)_Q11.2. We have devices but we don't use them] = ' ' then 0 elseif [(survey)_Q11.2. We have devices but we don't use them] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q11.3. By calling our internal IT helpdesk] = '-' THEN 0 elseif [(survey)_Q11.3. By calling our internal IT helpdesk] = ' ' then 0 elseif [(survey)_Q11.3. By calling our internal IT helpdesk] = &quot;Yes&quot; then 1 ELSE 0 ENDIF + &#xA;IF [(survey)_Q11.4. By a company technical contact onsite or at another location] = '-' THEN 0 elseif [(survey)_Q11.4. By a company technical contact onsite or at another location] = ' ' then 0 elseif [(survey)_Q11.4. By a company technical contact onsite or at another location] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;IF [(survey)_Q11.5. By an external organisation] = '-' THEN 0 elseif  [(survey)_Q11.5. By an external organisation] = ' ' then 0 elseif  [(survey)_Q11.5. By an external organisation] = &quot;Yes&quot; then 1 ELSE 0 ENDIF + &#xA;&#xA;IF [(survey)_Q11.6. By working it out ourselves] = '-' THEN 0 elseif [(survey)_Q11.6. By working it out ourselves] = ' ' then 0  elseif [(survey)_Q11.6. By working it out ourselves] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;&#xA;IF  [(survey)_Q11.7. By running our own formal IT training] = '-' THEN 0 elseif [(survey)_Q11.7. By running our own formal IT training] = ' ' then 0 elseif [(survey)_Q11.7. By running our own formal IT training] = &quot;Yes&quot; then 1 ELSE 0 ENDIF +&#xA;&#xA;IF  [(survey)_Q11.8. Informally with colleagues showing each other] = '-' THEN 0 elseif  [(survey)_Q11.8. Informally with colleagues showing each other] = ' ' then 0 elseif  [(survey)_Q11.8. Informally with colleagues showing each other] = &quot;Yes&quot; then 1 ELSE 0 ENDIF&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;" field="N8_How are IT devices currently supported in your care home? (please select all that apply)" size="8" type="Double" />
-                    <FormulaField expression="IF [(survey)_Q14. Is there a digital champion (someone who can help  others to use the iPad) in your care home?] = ' ' THEN 0  elseif [(survey)_Q14. Is there a digital champion (someone who can help  others to use the iPad) in your care home?] = '-' then 0 ELSE 1 ENDIF " field="N9_Is there a digital champion (someone who can help others to use the iPad) in your care home?" size="8" type="Double" />
-                    <FormulaField expression="&#xA;Round (IF [N1_Does the care home you work for have wifi (wireless internet) for staff?] = 0 then 0 else ([Does the care home you work for have wifi (wireless internet) for staff?]/[N1_Does the care home you work for have wifi (wireless internet) for staff?])*0.09 endif +&#xA;&#xA;IF [N2_What are the main reasons for not having good wifi throughout the care home?] = 0 then 0 else ([What are the main reasons for not having good wifi throughout the care home?]/[N2_What are the main reasons for not having good wifi throughout the care home?])*0.08 endif +&#xA;&#xA;IF [N3_Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?] = 0 then 0 else ([Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?]/[N3_Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?])*0.09 endif+&#xA;&#xA;IF [N4_Which other devices do you use in your care home for remote consultations with GPs or other health and care professionals?] = 0 then 0 else ([Which other devices do you use in your care home for remote consultations with GPs or other health and care professionals?]/[N4_Which other devices do you use in your care home for remote consultations with GPs or other health and care professionals?])*0.1 endif +&#xA;&#xA;IF [N5_Which of the following issues may make it difficult to hold video calls with GPs and health and care professionals?] = 0 then 0 else ( [Which of the following issues may make it difficult to hold video calls with GPs and health and care professionals?]/[N5_Which of the following issues may make it difficult to hold video calls with GPs and health and care professionals?])*0.16 endif+&#xA;&#xA;IF [N6_What other software tools/devices does your care home have access to:] = 0 then 0 else ( [What other software tools/devices does your care home have access to:] /[N6_What other software tools/devices does your care home have access to:] )*0.14 endif +&#xA;&#xA;IF [N7_How confident are staff when using devices such as laptops, tablets and iPads?]= 0 then 0 else ([How confident are staff when using devices such as laptops, tablets and iPads?] /[N7_How confident are staff when using devices such as laptops, tablets and iPads?])*0.09 endif +&#xA;&#xA;IF [N8_How are IT devices currently supported in your care home? (please select all that apply)]= 0 then 0 else ([How are IT devices currently supported in your care home? (please select all that apply)] /[N8_How are IT devices currently supported in your care home? (please select all that apply)])*0.16 endif +&#xA;&#xA;IF [N9_Is there a digital champion (someone who can help others to use the iPad) in your care home?]= 0 then 0 else ([Is there a digital champion (someone who can help others to use the iPad) in your care home?] /[N9_Is there a digital champion (someone who can help others to use the iPad) in your care home?])*0.09 endif ,0.01)&#xA;" field="Digital Maturity Score" size="8" type="Double" />
-                    <FormulaField expression="[N1_Does the care home you work for have wifi (wireless internet) for staff?] + &#xA;[N2_What are the main reasons for not having good wifi throughout the care home?] + &#xA;[N3_Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?] + [N4_Which other devices do you use in your care home for remote consultations with GPs or other health and care professionals?] +&#xA;[N5_Which of the following issues may make it difficult to hold video calls with GPs and health and care professionals?]+[N6_What other software tools/devices does your care home have access to:] + &#xA;[N7_How confident are staff when using devices such as laptops, tablets and iPads?]+&#xA;[N8_How are IT devices currently supported in your care home? (please select all that apply)] + &#xA;[N9_Is there a digital champion (someone who can help others to use the iPad) in your care home?]" field="Total Answered Question " size="8" type="Double" />
-                    <FormulaField expression="IF [Digital Maturity Score] &lt; 0.75 THEN &quot;no maturity&quot; ELSEIF [Digital Maturity Score] &gt;= 0.75 AND [Digital Maturity Score] &lt;1.5 THEN &quot;low&quot; ELSEIF [Digital Maturity Score] &gt;= 1.5 AND [Digital Maturity Score] &lt;2.25 THEN &quot;medium&quot;&#xA;ELSE &quot;high&quot; ENDIF" field="Digital Maturity Level" size="1073741823" type="V_WString" />
-                  </FormulaFields>
-                </Configuration>
-                <Annotation DisplayMode="0">
-                  <Name />
-                  <DefaultAnnotationText>Does the care home you work for have wifi (wireless internet) for staff? = IF [(...</DefaultAnnotationText>
-                  <Left value="False" />
-                </Annotation>
-              </Properties>
-              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-            </Node>
-            <Node ToolID="123">
-              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-                <Position x="319.0006" y="178" />
-              </GuiSettings>
-              <Properties>
-                <Configuration>
-                  <OrderChanged value="False" />
-                  <CommaDecimal value="False" />
-                  <SelectFields>
-                    <SelectField field="Filter" selected="False" />
-                    <SelectField field="Does the care home you work for have wifi (wireless internet) for staff?" selected="False" />
-                    <SelectField field="What are the main reasons for not having good wifi throughout the care home?" selected="False" />
-                    <SelectField field="Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?" selected="False" />
-                    <SelectField field="Which other devices do you use in your care home for remote consultations with GPs or other health and care professionals?" selected="False" />
-                    <SelectField field="Which of the following issues may make it difficult to hold video calls with GPs and health and care professionals?" selected="False" />
-                    <SelectField field="What other software tools/devices does your care home have access to:" selected="False" />
-                    <SelectField field="How confident are staff when using devices such as laptops, tablets and iPads?" selected="False" />
-                    <SelectField field="How are IT devices currently supported in your care home? (please select all that apply)" selected="False" />
-                    <SelectField field="Is there a digital champion (someone who can help others to use the iPad) in your care home?" selected="False" />
-                    <SelectField field="Total digital score" selected="False" />
-                    <SelectField field="Assigned weight /100 equal for the 9 questions" selected="False" />
-                    <SelectField field="Digital Maturity Scores 2" selected="False" />
-                    <SelectField field="N1_Does the care home you work for have wifi (wireless internet) for staff?" selected="False" />
-                    <SelectField field="N2_What are the main reasons for not having good wifi throughout the care home?" selected="False" />
-                    <SelectField field="N3_Do you currently use iPad or Android tablet devices for remote consultations with health and care professionals?" selected="False" />
-                    <SelectField field="N4_Which other devices do you use in your care home for remote consultations with GPs or other health and care professionals?" selected="False" />
-                    <SelectField field="N5_Which of the following issues may make it difficult to hold video calls with GPs and health and care professionals?" selected="False" />
-                    <SelectField field="N6_What other software tools/devices does your care home have access to:" selected="False" />
-                    <SelectField field="N7_How confident are staff when using devices such as laptops, tablets and iPads?" selected="False" />
-                    <SelectField field="N8_How are IT devices currently supported in your care home? (please select all that apply)" selected="False" />
-                    <SelectField field="N9_Is there a digital champion (someone who can help others to use the iPad) in your care home?" selected="False" />
-                    <SelectField field="Total Answered Question " selected="False" />
-                    <SelectField field="*Unknown" selected="True" />
-                  </SelectFields>
-                </Configuration>
-                <Annotation DisplayMode="0">
-                  <Name />
-                  <DefaultAnnotationText />
-                  <Left value="False" />
-                </Annotation>
-              </Properties>
-              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-            </Node>
-          </ChildNodes>
-        </Node>
         <Node ToolID="125">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="426" y="98" width="312.0006" height="286" />
+            <Position x="366" y="102" width="312.0006" height="256" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -250,7 +144,7 @@
           <ChildNodes>
             <Node ToolID="8">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="571.0006" y="178" />
+                <Position x="511.0006" y="182" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -268,7 +162,7 @@
             </Node>
             <Node ToolID="27">
               <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-                <Position x="654.0006" y="174" />
+                <Position x="594.0006" y="178" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -290,7 +184,7 @@
             </Node>
             <Node ToolID="72">
               <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-                <Position x="571.0006" y="142" width="84" height="28" />
+                <Position x="511.0006" y="146" width="84" height="28" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -310,7 +204,7 @@
             </Node>
             <Node ToolID="104">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-                <Position x="451.0006" y="178" />
+                <Position x="391.0006" y="182" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -354,9 +248,6 @@ Date Ended - Descending</DefaultAnnotationText>
               <DefaultAnnotationText>synthetic_survey_data.csv</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="UserID" size="254" source="File: D:\Users\Craig.Shenton\Database\synthetic_survey_data.csv" type="V_WString" />
@@ -365,6 +256,7 @@ Date Ended - Descending</DefaultAnnotationText>
                 <Field name="Date Ended" size="254" source="File: D:\Users\Craig.Shenton\Database\synthetic_survey_data.csv" type="V_WString" />
                 <Field name="Q1.1. CQC number" size="254" source="File: D:\Users\Craig.Shenton\Database\synthetic_survey_data.csv" type="V_WString" />
                 <Field name="Q4.1. Number of Devices" size="254" source="File: D:\Users\Craig.Shenton\Database\synthetic_survey_data.csv" type="V_WString" />
+                <Field name="Q5. Are these iPad or Android tablet devices capable of assisting you with remote consultations with health and care professionals? (e.g. can they support video calls?)" size="254" source="File: D:\Users\Craig.Shenton\Database\synthetic_survey_data.csv" type="V_WString" />
                 <Field name="Q7.1. Not enough tablet devices for staff to use for this purpose" size="254" source="File: D:\Users\Craig.Shenton\Database\synthetic_survey_data.csv" type="V_WString" />
                 <Field name="Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)" size="254" source="File: D:\Users\Craig.Shenton\Database\synthetic_survey_data.csv" type="V_WString" />
                 <Field name="Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations" size="254" source="File: D:\Users\Craig.Shenton\Database\synthetic_survey_data.csv" type="V_WString" />
@@ -428,9 +320,9 @@ Date Ended - Descending</DefaultAnnotationText>
         </Node>
       </ChildNodes>
     </Node>
-    <Node ToolID="147">
+    <Node ToolID="337">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1074" y="54" width="2125" height="1028" />
+        <Position x="1038" y="41.99982" width="2126" height="1027" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -446,9 +338,9 @@ Date Ended - Descending</DefaultAnnotationText>
         </Annotation>
       </Properties>
       <ChildNodes>
-        <Node ToolID="149">
+        <Node ToolID="261">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="2946" y="99.01401" width="216" height="129.986" />
+            <Position x="2911" y="85.99997" width="216" height="130" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -464,9 +356,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="138">
+            <Node ToolID="258">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-                <Position x="2956" y="128.014" />
+                <Position x="2921" y="115" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -483,9 +375,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
             </Node>
-            <Node ToolID="143">
+            <Node ToolID="259">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="3052" y="128.0174" />
+                <Position x="3017" y="115" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -502,9 +394,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="139">
+            <Node ToolID="260">
               <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-                <Position x="2956" y="188.0139" width="72" height="24" />
+                <Position x="2921" y="175" width="72" height="24" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -524,9 +416,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Node>
           </ChildNodes>
         </Node>
-        <Node ToolID="150">
+        <Node ToolID="265">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="2946" y="375.0138" width="216" height="129.9862" />
+            <Position x="2911" y="362" width="216" height="130" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -542,9 +434,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="136">
+            <Node ToolID="262">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-                <Position x="2956" y="404.0138" />
+                <Position x="2921" y="391" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -561,9 +453,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
             </Node>
-            <Node ToolID="137">
+            <Node ToolID="263">
               <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-                <Position x="2956" y="464.0138" width="60" height="22" />
+                <Position x="2921" y="451" width="60" height="22" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -581,9 +473,9 @@ Date Ended - Descending</DefaultAnnotationText>
                 </Annotation>
               </Properties>
             </Node>
-            <Node ToolID="144">
+            <Node ToolID="264">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="3052" y="404.0138" />
+                <Position x="3017" y="391" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -602,9 +494,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Node>
           </ChildNodes>
         </Node>
-        <Node ToolID="151">
+        <Node ToolID="269">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="2946" y="663.0139" width="228" height="129.9861" />
+            <Position x="2911" y="650" width="228" height="130" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -620,9 +512,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="142">
+            <Node ToolID="266">
               <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-                <Position x="2956" y="752.0139" width="60" height="24" />
+                <Position x="2921" y="739" width="60" height="24" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -640,9 +532,9 @@ Date Ended - Descending</DefaultAnnotationText>
                 </Annotation>
               </Properties>
             </Node>
-            <Node ToolID="177">
+            <Node ToolID="267">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="3064" y="692.0139" />
+                <Position x="3029" y="679" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -659,9 +551,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="179">
+            <Node ToolID="268">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-                <Position x="2956" y="692.0139" />
+                <Position x="2921" y="679" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -680,9 +572,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Node>
           </ChildNodes>
         </Node>
-        <Node ToolID="156">
+        <Node ToolID="273">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="1099" y="99.0009" width="217" height="660.9991" />
+            <Position x="1063" y="85.99982" width="218" height="661.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -698,9 +590,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="152">
+            <Node ToolID="270">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1216.001" y="128.0009" />
+                <Position x="1181" y="114.9998" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -717,9 +609,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="153">
+            <Node ToolID="271">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1216.001" y="644.0024" />
+                <Position x="1181" y="630.9998" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -736,9 +628,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="141">
+            <Node ToolID="272">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="1109.001" y="139.0003" />
+                <Position x="1073" y="126.9998" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -772,9 +664,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Node>
           </ChildNodes>
         </Node>
-        <Node ToolID="157">
+        <Node ToolID="280">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="1338" y="99.007" width="225" height="957.993" />
+            <Position x="1303" y="85.99995" width="225" height="958.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -790,9 +682,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="130">
+            <Node ToolID="274">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="1348.001" y="128.007" />
+                <Position x="1313" y="115" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -822,9 +714,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
             </Node>
-            <Node ToolID="131">
+            <Node ToolID="275">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="1348.001" y="644.0093" />
+                <Position x="1313" y="630.9999" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -854,9 +746,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
             </Node>
-            <Node ToolID="154">
+            <Node ToolID="276">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1456.001" y="128.0093" />
+                <Position x="1421" y="115" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -873,9 +765,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="158">
+            <Node ToolID="277">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1456.001" y="344.0062" />
+                <Position x="1421" y="330.9999" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -892,9 +784,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="162">
+            <Node ToolID="278">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1456.001" y="560.0093" />
+                <Position x="1421" y="546.9999" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -911,9 +803,9 @@ Date Ended - Descending</DefaultAnnotationText>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="155">
+            <Node ToolID="279">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1456.001" y="956.0093" />
+                <Position x="1421" y="942.9999" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -932,9 +824,9 @@ Date Ended - Descending</DefaultAnnotationText>
             </Node>
           </ChildNodes>
         </Node>
-        <Node ToolID="175">
+        <Node ToolID="289">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="1589" y="98.0001" width="268" height="941.9999" />
+            <Position x="1555" y="86" width="267" height="942" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -950,17 +842,21 @@ Date Ended - Descending</DefaultAnnotationText>
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="134">
+            <Node ToolID="281">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="1600.001" y="239.9993" />
+                <Position x="1565" y="235" />
               </GuiSettings>
               <Properties>
                 <Configuration>
-                  <Expression>[Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)] = "YES"
+                  <Expression>[Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)] = "Yes"
 
 OR
 
-[Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations] = "YES"</Expression>
+[Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations] = "Yes"
+
+OR
+
+[Q5. Are these iPad or Android tablet devices capable of assisting you with remote consultations with health and care professionals? (e.g. can they support video calls?)] = 'No'</Expression>
                   <Mode>Custom</Mode>
                   <Simple>
                     <Operator>=</Operator>
@@ -987,9 +883,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
             </Node>
-            <Node ToolID="167">
+            <Node ToolID="282">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1744.001" y="227.9998" />
+                <Position x="1709" y="223" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1006,9 +902,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="169">
+            <Node ToolID="283">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1745.001" y="127.0001" />
+                <Position x="1709" y="115" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1025,9 +921,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="170">
+            <Node ToolID="284">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1744.001" y="371.9995" />
+                <Position x="1709" y="367" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1044,17 +940,21 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="225">
+            <Node ToolID="285">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="1599.001" y="631.9995" />
+                <Position x="1565" y="619" />
               </GuiSettings>
               <Properties>
                 <Configuration>
-                  <Expression>[Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)] = "YES"
+                  <Expression>[Q7.2. Our tablet devices are not good enough (ie they're too old / slow / do not have the right features)] = "Yes"
 
 OR
 
-[Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations] = "YES"</Expression>
+[Q7.3. Our tablets are reserved for - or locked down to - other things and cannot be used for remote consultations] = "Yes"
+
+OR
+
+[Q5. Are these iPad or Android tablet devices capable of assisting you with remote consultations with health and care professionals? (e.g. can they support video calls?)] = 'No'</Expression>
                   <Mode>Custom</Mode>
                   <Simple>
                     <Operator>=</Operator>
@@ -1081,9 +981,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
             </Node>
-            <Node ToolID="226">
+            <Node ToolID="286">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1743.001" y="715.9995" />
+                <Position x="1709" y="703" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1100,9 +1000,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="227">
+            <Node ToolID="287">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1743.001" y="583.9995" />
+                <Position x="1709" y="571" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1119,9 +1019,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="174">
+            <Node ToolID="288">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="1745.001" y="955.0001" />
+                <Position x="1709" y="943" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1140,9 +1040,9 @@ OR
             </Node>
           </ChildNodes>
         </Node>
-        <Node ToolID="189">
+        <Node ToolID="302">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="2478" y="99.01379" width="268" height="941.9862" />
+            <Position x="2443" y="85.99998" width="267" height="942" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1158,13 +1058,13 @@ OR
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="181">
+            <Node ToolID="290">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="2488" y="584.0139" />
+                <Position x="2453" y="571" />
               </GuiSettings>
               <Properties>
                 <Configuration>
-                  <Expression>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "YES"</Expression>
+                  <Expression>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "TRUE"</Expression>
                   <Mode>Custom</Mode>
                   <Simple>
                     <Operator>=</Operator>
@@ -1184,15 +1084,15 @@ OR
                 </Configuration>
                 <Annotation DisplayMode="0">
                   <Name />
-                  <DefaultAnnotationText>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "YES"</DefaultAnnotationText>
+                  <DefaultAnnotationText>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "TRUE"</DefaultAnnotationText>
                   <Left value="False" />
                 </Annotation>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
             </Node>
-            <Node ToolID="182">
+            <Node ToolID="291">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2620" y="560.0139" />
+                <Position x="2585" y="547" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1209,9 +1109,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="183">
+            <Node ToolID="292">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2620" y="692.0139" />
+                <Position x="2585" y="679" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1228,9 +1128,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="184">
+            <Node ToolID="293">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2620" y="824.0139" />
+                <Position x="2585" y="811" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1247,9 +1147,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="186">
+            <Node ToolID="294">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2620" y="128.0138" />
+                <Position x="2585" y="115" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1266,9 +1166,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="188">
+            <Node ToolID="295">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2620" y="464.0139" />
+                <Position x="2585" y="451" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1285,9 +1185,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="198">
+            <Node ToolID="296">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2620" y="956.0139" />
+                <Position x="2585" y="943" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1304,13 +1204,13 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="239">
+            <Node ToolID="297">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="2501" y="247" />
+                <Position x="2465" y="235" />
               </GuiSettings>
               <Properties>
                 <Configuration>
-                  <Expression>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "YES"</Expression>
+                  <Expression>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "TRUE"</Expression>
                   <Mode>Custom</Mode>
                   <Simple>
                     <Operator>=</Operator>
@@ -1330,15 +1230,15 @@ OR
                 </Configuration>
                 <Annotation DisplayMode="0">
                   <Name />
-                  <DefaultAnnotationText>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "YES"</DefaultAnnotationText>
+                  <DefaultAnnotationText>[Q7.1. Not enough tablet devices for staff to use for this purpose] = "TRUE"</DefaultAnnotationText>
                   <Left value="False" />
                 </Annotation>
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
             </Node>
-            <Node ToolID="240">
+            <Node ToolID="298">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2633" y="223" />
+                <Position x="2597" y="211" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1355,9 +1255,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="241">
+            <Node ToolID="299">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2633" y="319" />
+                <Position x="2597" y="307" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1374,9 +1274,28 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="244">
+            <Node ToolID="300">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2621" y="403" />
+                <Position x="2585" y="391" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="Null()" field="Flag 6" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Flag 6 = Null()
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="301">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="2501" y="163" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1395,9 +1314,9 @@ OR
             </Node>
           </ChildNodes>
         </Node>
-        <Node ToolID="197">
+        <Node ToolID="314">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="2189" y="103" width="241.6725" height="941" />
+            <Position x="2155" y="86" width="287" height="942" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1413,9 +1332,9 @@ OR
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="196">
+            <Node ToolID="303">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2307" y="827.9999" />
+                <Position x="2273" y="823" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1432,9 +1351,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="195">
+            <Node ToolID="304">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2307" y="551.9999" />
+                <Position x="2273" y="547" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1451,9 +1370,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="194">
+            <Node ToolID="305">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2307" y="455.9999" />
+                <Position x="2273" y="451" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1470,9 +1389,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="180">
+            <Node ToolID="306">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="2199" y="563.9999" />
+                <Position x="2165" y="559" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1502,9 +1421,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
             </Node>
-            <Node ToolID="191">
+            <Node ToolID="307">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2307" y="132" />
+                <Position x="2273" y="127" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1521,9 +1440,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="190">
+            <Node ToolID="308">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2308" y="958.986" />
+                <Position x="2273" y="943" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1540,9 +1459,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="236">
+            <Node ToolID="309">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="2200" y="238.986" />
+                <Position x="2165" y="223" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1572,9 +1491,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
             </Node>
-            <Node ToolID="237">
+            <Node ToolID="310">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2309" y="222.9991" />
+                <Position x="2273" y="211" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1591,9 +1510,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="238">
+            <Node ToolID="311">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2309" y="355" />
+                <Position x="2273" y="343" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1610,11 +1529,49 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
+            <Node ToolID="312">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+                <Position x="2177" y="115" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <ByName_ErrorMode>Warning</ByName_ErrorMode>
+                  <ByName_OutputMode>All</ByName_OutputMode>
+                  <Mode>ByName</Mode>
+                  <SetOutputOrder value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+            </Node>
+            <Node ToolID="313">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="2345" y="163" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="Null()" field="Flag 5" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Flag 5 = Null()
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
           </ChildNodes>
         </Node>
-        <Node ToolID="207">
+        <Node ToolID="325">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="2790" y="99.0137" width="107.0461" height="957.9863" />
+            <Position x="2719" y="86" width="142" height="958" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1630,9 +1587,9 @@ OR
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="199">
+            <Node ToolID="315">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2800" y="128.0137" />
+                <Position x="2765" y="115" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1649,9 +1606,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="203">
+            <Node ToolID="316">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2800" y="692.0139" />
+                <Position x="2765" y="679" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1668,9 +1625,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="204">
+            <Node ToolID="317">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2800" y="824.0139" />
+                <Position x="2765" y="811" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1687,9 +1644,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="205">
+            <Node ToolID="318">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2800" y="572.0139" />
+                <Position x="2765" y="559" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1706,9 +1663,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="206">
+            <Node ToolID="319">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2800" y="464.0139" />
+                <Position x="2765" y="451" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1725,9 +1682,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="202">
+            <Node ToolID="320">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2800" y="956.0139" />
+                <Position x="2765" y="943" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1744,9 +1701,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="242">
+            <Node ToolID="321">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2801" y="235" />
+                <Position x="2765" y="223" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1763,9 +1720,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="243">
+            <Node ToolID="322">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2801" y="319" />
+                <Position x="2765" y="307" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1782,9 +1739,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="245">
+            <Node ToolID="323">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2801" y="403" />
+                <Position x="2765" y="391" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1795,6 +1752,25 @@ OR
                 <Annotation DisplayMode="0">
                   <Name />
                   <DefaultAnnotationText><![CDATA[Priority = "Ineligible"
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="324">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="2729" y="187" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="&quot;Priority One&quot;" field="Priority" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Priority = "Priority One"
 ]]></DefaultAnnotationText>
                   <Left value="False" />
                 </Annotation>
@@ -1803,9 +1779,9 @@ OR
             </Node>
           </ChildNodes>
         </Node>
-        <Node ToolID="164">
+        <Node ToolID="336">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="1889" y="98" width="253" height="947" />
+            <Position x="1855" y="86.00002" width="251" height="954" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1821,9 +1797,9 @@ OR
             </Annotation>
           </Properties>
           <ChildNodes>
-            <Node ToolID="133">
+            <Node ToolID="326">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-                <Position x="1899.001" y="348.0003" />
+                <Position x="1865" y="343" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1853,9 +1829,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
             </Node>
-            <Node ToolID="159">
+            <Node ToolID="327">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2031.001" y="240.001" />
+                <Position x="1997" y="355" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1872,9 +1848,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="161">
+            <Node ToolID="328">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2031.001" y="456" />
+                <Position x="1997" y="451" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1891,9 +1867,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="165">
+            <Node ToolID="329">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2031.001" y="132" />
+                <Position x="1997" y="115" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1910,9 +1886,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="166">
+            <Node ToolID="330">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2031.001" y="960" />
+                <Position x="1997" y="955" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1929,9 +1905,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
             </Node>
-            <Node ToolID="233">
+            <Node ToolID="331">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-                <Position x="1901.001" y="127" />
+                <Position x="1865" y="943" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1948,28 +1924,9 @@ OR
               </Properties>
               <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
             </Node>
-            <Node ToolID="234">
-              <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-                <Position x="1901.001" y="955.0001" />
-              </GuiSettings>
-              <Properties>
-                <Configuration>
-                  <ByName_ErrorMode>Warning</ByName_ErrorMode>
-                  <ByName_OutputMode>All</ByName_OutputMode>
-                  <Mode>ByName</Mode>
-                  <SetOutputOrder value="False" />
-                </Configuration>
-                <Annotation DisplayMode="0">
-                  <Name />
-                  <DefaultAnnotationText />
-                  <Left value="False" />
-                </Annotation>
-              </Properties>
-              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
-            </Node>
-            <Node ToolID="235">
+            <Node ToolID="332">
               <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-                <Position x="2045.001" y="583" />
+                <Position x="2009" y="571" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1980,6 +1937,76 @@ OR
                 <Annotation DisplayMode="0">
                   <Name />
                   <DefaultAnnotationText><![CDATA[Flag 4 = Null()
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="333">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1997" y="187" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="&quot;Two or more current devices&quot;" field="Flag 4" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Flag 4 = "Two or more current devices"
+]]></DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+            </Node>
+            <Node ToolID="334">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+                <Position x="1865" y="175" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Expression>[(survey)_Q4.1. Current number of devices] &gt; 1</Expression>
+                  <Mode>Simple</Mode>
+                  <Simple>
+                    <Operator>&gt;</Operator>
+                    <Field>(survey)_Q4.1. Current number of devices</Field>
+                    <Operands>
+                      <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                      <DateType>fixed</DateType>
+                      <PeriodDate>2020-10-30 20:18:40</PeriodDate>
+                      <PeriodType>
+                      </PeriodType>
+                      <PeriodCount>0</PeriodCount>
+                      <Operand>1</Operand>
+                      <StartDate>2020-10-30 20:18:40</StartDate>
+                      <EndDate>2020-10-30 20:18:40</EndDate>
+                    </Operands>
+                  </Simple>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText>[(survey)_Q4.1. Current number of devices] &gt; 1</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+            </Node>
+            <Node ToolID="335">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+                <Position x="1997" y="283" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <FormulaFields>
+                    <FormulaField expression="&quot;Only one Current Device&quot;" field="Flag 4" size="1073741823" type="V_WString" />
+                  </FormulaFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText><![CDATA[Flag 4 = "Only one Current Device"
 ]]></DefaultAnnotationText>
                   <Left value="False" />
                 </Annotation>
@@ -1999,10 +2026,6 @@ OR
     <Connection>
       <Origin ToolID="176" Connection="Output" />
       <Destination ToolID="208" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="100" Connection="Output" />
-      <Destination ToolID="123" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="8" Connection="Output" />
@@ -2026,287 +2049,315 @@ OR
     </Connection>
     <Connection>
       <Origin ToolID="257" Connection="Output" />
-      <Destination ToolID="141" Connection="Input" />
+      <Destination ToolID="272" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="138" Connection="Output" />
-      <Destination ToolID="143" Connection="Input" />
+      <Origin ToolID="258" Connection="Output" />
+      <Destination ToolID="259" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="259" Connection="Output" />
+      <Destination ToolID="176" Connection="Input" />
     </Connection>
     <Connection name="#1">
-      <Origin ToolID="143" Connection="Output" />
+      <Origin ToolID="264" Connection="Output" />
       <Destination ToolID="176" Connection="Input" />
     </Connection>
     <Connection name="#3">
-      <Origin ToolID="144" Connection="Output" />
-      <Destination ToolID="176" Connection="Input" />
-    </Connection>
-    <Connection name="#2">
-      <Origin ToolID="177" Connection="Output" />
+      <Origin ToolID="267" Connection="Output" />
       <Destination ToolID="176" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="136" Connection="Output" />
-      <Destination ToolID="144" Connection="Input" />
+      <Origin ToolID="262" Connection="Output" />
+      <Destination ToolID="264" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="179" Connection="Output" />
-      <Destination ToolID="177" Connection="Input" />
+      <Origin ToolID="268" Connection="Output" />
+      <Destination ToolID="267" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="152" Connection="Output" />
-      <Destination ToolID="130" Connection="Input" />
+      <Origin ToolID="270" Connection="Output" />
+      <Destination ToolID="274" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="153" Connection="Output" />
-      <Destination ToolID="131" Connection="Input" />
+      <Origin ToolID="271" Connection="Output" />
+      <Destination ToolID="275" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="141" Connection="True" />
-      <Destination ToolID="152" Connection="Input" />
+      <Origin ToolID="272" Connection="True" />
+      <Destination ToolID="270" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="141" Connection="False" />
-      <Destination ToolID="153" Connection="Input" />
+      <Origin ToolID="272" Connection="False" />
+      <Destination ToolID="271" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="130" Connection="False" />
-      <Destination ToolID="154" Connection="Input" />
+      <Origin ToolID="274" Connection="False" />
+      <Destination ToolID="276" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="130" Connection="True" />
-      <Destination ToolID="158" Connection="Input" />
+      <Origin ToolID="274" Connection="True" />
+      <Destination ToolID="277" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="131" Connection="False" />
-      <Destination ToolID="155" Connection="Input" />
+      <Origin ToolID="275" Connection="False" />
+      <Destination ToolID="279" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="131" Connection="True" />
-      <Destination ToolID="162" Connection="Input" />
+      <Origin ToolID="275" Connection="True" />
+      <Destination ToolID="278" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="154" Connection="Output" />
-      <Destination ToolID="169" Connection="Input" />
+      <Origin ToolID="276" Connection="Output" />
+      <Destination ToolID="283" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="158" Connection="Output" />
-      <Destination ToolID="134" Connection="Input" />
+      <Origin ToolID="277" Connection="Output" />
+      <Destination ToolID="281" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="162" Connection="Output" />
-      <Destination ToolID="225" Connection="Input" />
+      <Origin ToolID="278" Connection="Output" />
+      <Destination ToolID="285" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="155" Connection="Output" />
-      <Destination ToolID="174" Connection="Input" />
+      <Origin ToolID="279" Connection="Output" />
+      <Destination ToolID="288" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="134" Connection="True" />
-      <Destination ToolID="167" Connection="Input" />
+      <Origin ToolID="281" Connection="True" />
+      <Destination ToolID="282" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="134" Connection="False" />
-      <Destination ToolID="170" Connection="Input" />
+      <Origin ToolID="281" Connection="False" />
+      <Destination ToolID="284" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="282" Connection="Output" />
+      <Destination ToolID="334" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="283" Connection="Output" />
+      <Destination ToolID="329" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="284" Connection="Output" />
+      <Destination ToolID="326" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="285" Connection="False" />
+      <Destination ToolID="286" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="285" Connection="True" />
+      <Destination ToolID="287" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="286" Connection="Output" />
+      <Destination ToolID="332" Connection="Input" />
     </Connection>
     <Connection name="#2">
-      <Origin ToolID="167" Connection="Output" />
-      <Destination ToolID="233" Connection="Input" />
+      <Origin ToolID="287" Connection="Output" />
+      <Destination ToolID="331" Connection="Input" />
     </Connection>
     <Connection name="#1">
-      <Origin ToolID="169" Connection="Output" />
-      <Destination ToolID="233" Connection="Input" />
+      <Origin ToolID="288" Connection="Output" />
+      <Destination ToolID="331" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="170" Connection="Output" />
-      <Destination ToolID="133" Connection="Input" />
+      <Origin ToolID="290" Connection="True" />
+      <Destination ToolID="291" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="225" Connection="False" />
-      <Destination ToolID="226" Connection="Input" />
+      <Origin ToolID="290" Connection="False" />
+      <Destination ToolID="292" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="225" Connection="True" />
-      <Destination ToolID="227" Connection="Input" />
+      <Origin ToolID="291" Connection="Output" />
+      <Destination ToolID="318" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="226" Connection="Output" />
-      <Destination ToolID="235" Connection="Input" />
+      <Origin ToolID="292" Connection="Output" />
+      <Destination ToolID="316" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="293" Connection="Output" />
+      <Destination ToolID="317" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="294" Connection="Output" />
+      <Destination ToolID="315" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="295" Connection="Output" />
+      <Destination ToolID="319" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="296" Connection="Output" />
+      <Destination ToolID="320" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="297" Connection="True" />
+      <Destination ToolID="298" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="297" Connection="False" />
+      <Destination ToolID="299" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="298" Connection="Output" />
+      <Destination ToolID="321" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="299" Connection="Output" />
+      <Destination ToolID="322" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="300" Connection="Output" />
+      <Destination ToolID="323" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="301" Connection="Output" />
+      <Destination ToolID="324" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="303" Connection="Output" />
+      <Destination ToolID="293" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="304" Connection="Output" />
+      <Destination ToolID="290" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="305" Connection="Output" />
+      <Destination ToolID="295" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="306" Connection="True" />
+      <Destination ToolID="304" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="306" Connection="False" />
+      <Destination ToolID="303" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="307" Connection="Output" />
+      <Destination ToolID="294" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="308" Connection="Output" />
+      <Destination ToolID="296" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="True" />
+      <Destination ToolID="310" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="False" />
+      <Destination ToolID="311" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="310" Connection="Output" />
+      <Destination ToolID="297" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="311" Connection="Output" />
+      <Destination ToolID="300" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="312" Connection="Output" />
+      <Destination ToolID="307" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="313" Connection="Output" />
+      <Destination ToolID="301" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="315" Connection="Output" />
+      <Destination ToolID="258" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="316" Connection="Output" />
+      <Destination ToolID="268" Connection="Input" />
     </Connection>
     <Connection name="#2">
-      <Origin ToolID="227" Connection="Output" />
-      <Destination ToolID="234" Connection="Input" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="174" Connection="Output" />
-      <Destination ToolID="234" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="181" Connection="True" />
-      <Destination ToolID="182" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="181" Connection="False" />
-      <Destination ToolID="183" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="182" Connection="Output" />
-      <Destination ToolID="205" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="183" Connection="Output" />
-      <Destination ToolID="203" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="184" Connection="Output" />
-      <Destination ToolID="204" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="186" Connection="Output" />
-      <Destination ToolID="199" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="188" Connection="Output" />
-      <Destination ToolID="206" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="198" Connection="Output" />
-      <Destination ToolID="202" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="239" Connection="True" />
-      <Destination ToolID="240" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="239" Connection="False" />
-      <Destination ToolID="241" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="240" Connection="Output" />
-      <Destination ToolID="242" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="241" Connection="Output" />
-      <Destination ToolID="243" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="244" Connection="Output" />
-      <Destination ToolID="245" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="196" Connection="Output" />
-      <Destination ToolID="184" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="195" Connection="Output" />
-      <Destination ToolID="181" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="194" Connection="Output" />
-      <Destination ToolID="188" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="180" Connection="True" />
-      <Destination ToolID="195" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="180" Connection="False" />
-      <Destination ToolID="196" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="191" Connection="Output" />
-      <Destination ToolID="186" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="190" Connection="Output" />
-      <Destination ToolID="198" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="236" Connection="True" />
-      <Destination ToolID="237" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="236" Connection="False" />
-      <Destination ToolID="238" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="237" Connection="Output" />
-      <Destination ToolID="239" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="238" Connection="Output" />
-      <Destination ToolID="244" Connection="Input" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="199" Connection="Output" />
-      <Destination ToolID="138" Connection="Input" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="203" Connection="Output" />
-      <Destination ToolID="179" Connection="Input" />
-    </Connection>
-    <Connection name="#2">
-      <Origin ToolID="204" Connection="Output" />
-      <Destination ToolID="179" Connection="Input" />
+      <Origin ToolID="317" Connection="Output" />
+      <Destination ToolID="268" Connection="Input" />
     </Connection>
     <Connection name="#3">
-      <Origin ToolID="243" Connection="Output" />
-      <Destination ToolID="179" Connection="Input" />
+      <Origin ToolID="322" Connection="Output" />
+      <Destination ToolID="268" Connection="Input" />
     </Connection>
     <Connection name="#4">
-      <Origin ToolID="245" Connection="Output" />
-      <Destination ToolID="179" Connection="Input" />
+      <Origin ToolID="323" Connection="Output" />
+      <Destination ToolID="268" Connection="Input" />
     </Connection>
     <Connection name="#5">
-      <Origin ToolID="205" Connection="Output" />
-      <Destination ToolID="136" Connection="Input" />
+      <Origin ToolID="318" Connection="Output" />
+      <Destination ToolID="262" Connection="Input" />
     </Connection>
     <Connection name="#1">
-      <Origin ToolID="206" Connection="Output" />
-      <Destination ToolID="136" Connection="Input" />
+      <Origin ToolID="319" Connection="Output" />
+      <Destination ToolID="262" Connection="Input" />
     </Connection>
     <Connection name="#3">
-      <Origin ToolID="202" Connection="Output" />
-      <Destination ToolID="136" Connection="Input" />
+      <Origin ToolID="320" Connection="Output" />
+      <Destination ToolID="262" Connection="Input" />
     </Connection>
     <Connection name="#2">
-      <Origin ToolID="242" Connection="Output" />
-      <Destination ToolID="136" Connection="Input" />
+      <Origin ToolID="321" Connection="Output" />
+      <Destination ToolID="262" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="324" Connection="Output" />
+      <Destination ToolID="262" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="133" Connection="True" />
-      <Destination ToolID="159" Connection="Input" />
+      <Origin ToolID="326" Connection="True" />
+      <Destination ToolID="327" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="133" Connection="False" />
-      <Destination ToolID="161" Connection="Input" />
+      <Origin ToolID="326" Connection="False" />
+      <Destination ToolID="328" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="159" Connection="Output" />
-      <Destination ToolID="236" Connection="Input" />
+      <Origin ToolID="327" Connection="Output" />
+      <Destination ToolID="309" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="161" Connection="Output" />
-      <Destination ToolID="194" Connection="Input" />
+      <Origin ToolID="328" Connection="Output" />
+      <Destination ToolID="305" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="329" Connection="Output" />
+      <Destination ToolID="312" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="335" Connection="Output" />
+      <Destination ToolID="312" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="165" Connection="Output" />
-      <Destination ToolID="191" Connection="Input" />
+      <Origin ToolID="330" Connection="Output" />
+      <Destination ToolID="308" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="166" Connection="Output" />
-      <Destination ToolID="190" Connection="Input" />
+      <Origin ToolID="331" Connection="Output" />
+      <Destination ToolID="330" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="233" Connection="Output" />
-      <Destination ToolID="165" Connection="Input" />
+      <Origin ToolID="332" Connection="Output" />
+      <Destination ToolID="306" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="234" Connection="Output" />
-      <Destination ToolID="166" Connection="Input" />
+      <Origin ToolID="333" Connection="Output" />
+      <Destination ToolID="313" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="235" Connection="Output" />
-      <Destination ToolID="180" Connection="Input" />
+      <Origin ToolID="334" Connection="True" />
+      <Destination ToolID="333" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="334" Connection="False" />
+      <Destination ToolID="335" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
